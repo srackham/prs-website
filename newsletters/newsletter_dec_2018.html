@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">December 2018</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="sect1">
+<h2 id="X1">Microsoft Outlook 1811 integration issue</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Microsoft Office update released on 27-Nov-2018 (Version 1811
+Build 11029.20079) introduced an incompatibility issue which can
+cause the PRS to randomly close.</p></div>
+<div class="paragraph"><p>Affected Outlook versions: 1811 and newer.</p></div>
+<div class="paragraph"><p>The symptoms:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The PRS closes at random times after sending an email from the PRS.
+</p>
+</li>
+<li>
+<p>
+The PRS displays an error message when you run the PRS <em>Tools&#8594;InBox
+  Tool</em> command and then the PRS closes when you dismiss the error.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>We are working on a fix but in the mean time you will need to revert
+Microsoft Office to an Office release prior to 1811.</p></div>
+<div class="paragraph"><p>Here&#8217;s how to revert Microsoft Office 365:</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">Before beginning check that you are running a
+<a href="#X2">32-bit version of Microsoft Office</a>.</td>
+</tr></table>
+</div>
+<div class="sect2">
+<h3 id="_steps_to_revert_to_microsoft_office">Steps to revert to Microsoft Office</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Start Outlook.
+</p>
+</li>
+<li>
+<p>
+Click <em>File</em>, and then click <em>Office Account</em>. You should see
+   something like (you need to revert if the Version is 1811 or
+   greater):
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="outlook-1811-info.png" alt="outlook-1811-info.png" />
+</div>
+</div>
+</li>
+<li>
+<p>
+In the Product Information column, click <em>Update Options</em>, and then
+     click <em>Disable Updates</em>.
+</p>
+</li>
+<li>
+<p>
+Make a note of the Update Channel. It&#8217;s immediately under the
+   version number and will be either <em>Monthly Channel</em> or <em>Semi-annual
+   Channel</em>.
+</p>
+</li>
+<li>
+<p>
+Close all Office applications.
+</p>
+</li>
+<li>
+<p>
+Open a Windows command prompt as administrator:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Click the Start button.
+</p>
+</li>
+<li>
+<p>
+In the search box, type cmd.
+</p>
+</li>
+<li>
+<p>
+Right-click on cmd.exe and choose Run as Administrator. If done properly, the below User Account Control window will appear.
+</p>
+</li>
+<li>
+<p>
+Click Yes to run the Windows Command Prompt as Administrator.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Revert the Microsoft Office version.  If you are on the <em>Monthly
+   Channel</em> run this command from the Windows command prompt:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>"C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeC2RClient.exe" /update user updatetoversion=16.0.11001.20108</code></pre>
+</div></div>
+<div class="paragraph"><p>If you are on the <em>Semi-annual Channel</em> run this command from the
+Windows command prompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>"C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeC2RClient.exe" /update user updatetoversion=16.0.10730.20264</code></pre>
+</div></div>
+</li>
+<li>
+<p>
+Reboot your PC.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>The PRS should now send mail without errors.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">You can only update MS Office with versions specific to your
+currently set Update Channel. See
+<a href="https://docs.microsoft.com/en-gb/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7">Update
+history for Office 365 ProPlus</a> for Update Channel version numbers.
+If you try updating to a version not specific to your Update Channel
+then the MS Office updater throws <em>Error Code 30125-27 (404</em>) and the
+accompanying help is not helpful.</td>
+</tr></table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph"><p>See also:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://support.microsoft.com/en-nz/help/2770432/how-to-revert-to-an-earlier-version-of-office-2013-or-office-2016-clic">How
+  to revert to an earlier version of Office 2016 Click-to-Run</a>.
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.clearconcepts.ca/insights/understanding-office-365-updates-and-channels">Understanding
+  Office 365 Updates and Channels</a>.
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.microsoft.com/en-gb/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7">Update
+  history for Office 365 ProPlus</a>.
+</p>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X2">32-bit Microsoft Office compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You must use a 32-bit version of Microsoft Office to enable PRS integration with Microsoft Outlook.</p></div>
+<div class="paragraph"><p>To check you have 32-bit Microsoft Office installed:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Start Outlook.
+</p>
+</li>
+<li>
+<p>
+Click <em>File</em>, and then click <em>Office Account</em>.
+</p>
+</li>
+<li>
+<p>
+Press the <em>About Outlook</em> button.  You should see something like:
+</p>
+<div class="imageblock">
+<div class="content">
+<img src="outlook-about.png" alt="outlook-about.png" />
+</div>
+</div>
+</li>
+</ol></div>
+<div class="paragraph"><p>If you have a 64-bit version you must first uninstall it before
+installing the 32-bit version.</p></div>
+<div class="paragraph"><p>After installing a 32-bit version you need to fix the
+<a href="#X1">Microsoft Outlook 1811 integration issue</a>.</p></div>
+<div class="paragraph"><p>See also:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://blogs.technet.microsoft.com/office2010/2010/02/23/understanding-64-bit-office/">Understanding
+  64-Bit Office</a>.
+</p>
+</li>
+<li>
+<p>
+<a href="https://support.office.com/en-us/article/choose-between-the-64-bit-or-32-bit-version-of-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261">Choose
+  between the 64-bit or 32-bit version of Office</a>.
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_newsletter_back_issues">Newsletter back issues</h3>
+<div class="paragraph"><p>See our <a href="http://prshq.com/news.html">Newsletter Archive</a> for more or PRS
+Tips &amp; Tricks.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_need_help">Need help?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Our <a href="http://prshq.com/support.html">Support</a> web page
+explains how to get answers to PRS questions and includes links to
+articles on <a href="http://prshq.com/maintenance.html">Maintaining
+Database Reliability and Performance</a> and
+<a href="http://prshq.com/best_practice_deployment.html">PRS Best
+Practice Deployment</a>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you no longer wish to receive this newsletter please
+email <a href="mailto:support@prshq.com">support@prshq.com</a> with the word <em>UNSUBSCRIBE</em> in
+the subject line.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>

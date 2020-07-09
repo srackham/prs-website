@@ -89,6 +89,14 @@ div.listingblock pre {
   width: 80%;
 }
 
+/*
+div.sidebarblock {
+  background: #ffffee;
+  padding: 0.5em 1em;
+  border: 2px solid silver;
+}
+*/
+
 div.sidebar-content {
 /*Because OL only applies background to text (not block)
   background: #ffffee;
