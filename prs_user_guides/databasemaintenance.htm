@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Database Maintenance</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Database Maintenance">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?databasemaintenance.htm"; }
+  else { parent.quicksync('a3.18'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">Database Maintenance</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="schedulingprsmonbackups.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="toplevelintroduction.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="loggingoffusers.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>Databases can be damaged by your computing environment. The PRS will usually warn you at start up if it suspects a damaged database with the following message: <span style="font-weight: bold;">Cannot open shared PRS database the file may be corrupt</span>. If you get this message you should <a href="compactbackupdatabase.htm">Compact and Backup</a> the shared database immediately using the PRS database administration program (PRSMon).</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Steps you can take to avoid data errors and data corruption include:</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Don't unplug network cables, press the PC reset button or turn off the PC power while the PRS is open.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Fatal system errors almost always cause abnormal termination. If your computer is prone to fatal errors, you should resolve the source of the errors.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Compact the database regularly using the PRS Monitor program (PRSMon).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Do not attempt to open the PRS shared database with other applications — use a copy instead (run the PRS Monitor <span style="font-weight: bold;">Make Offline Copy</span> menu command to create a copy).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Turn off anti-virus background scanning of the shared PRS database.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Use robust, reliable hardware — database application reliability is only as good as file server and network. Databases are more network intensive than other applications, consequently intermittent hardware problems are much more likely to show up in database applications such as the PRS.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Disable opportunistic locking on all PRS client PCs or the server hosting the shared PRS database (see <span style="color: #0000ff; text-decoration: underline;"><a href="http://prshq.com/maintenance.html" target="_blank" class="weblink">http://prshq.com/maintenance.html</a></span>).</td></tr></table></div><p>&nbsp;</p>
+<p>In addition you should also:</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Verify that the latest operating system service pack is installed.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Verify that the latest Microsoft Jet Service Pack is installed on all clients (the PRS client install should ensure the correct service pack is installed).</td></tr></table></div><p>&nbsp;</p>
+<p>Users should be encouraged to close the PRS before closing down Windows and switching their PC's off.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The PC containing the shared PRS database should not be shut down until all PRS users have logged off (<a href="loggingoffusers.htm">see Logging Off Users</a>).</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>If database compaction and repair fails or results in data truncation you may need to revert to the previous PRS backup (see <a href="backinguptheprs.htm">Backing up the PRS</a>).</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>To safeguard your data you should compact and backup the shared PRS database regularly.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>

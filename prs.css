@@ -1,0 +1,251 @@
+/*
+  PRS web site main stylesheet.
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  background-image: url(images/sidebar.png);
+  background-position: 0 0;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+}
+* { color: #009;}
+
+div#content {
+  margin: 5px 25px 25px 150px;
+  padding: 10px;
+  min-height: 250px;
+  color: black;
+  background-color: transparent;
+}
+div#content a:link {color: #00C; font-weight: bold;}
+div#content a:link:hover {color: #F60;}
+div#content a:visited {color: #06F; font-weight: bold;}
+div#content a:visited:hover {color: #F60;}
+
+div#menu {
+  position: absolute;
+  top: 120px; left: 0; width: 150px;
+}
+div#menu a {
+  display: block;
+  padding: 5px 10px;
+  margin: 0 0 2px;
+  border-width: 0;
+  color: white;
+  font: bold 16px/16px Arial, sans-serif; 
+  text-align: center; 
+  text-decoration: none;
+}
+div#menu a:hover {color: #F93;}
+
+p#slogan {
+  background: #a6caf0;
+  /* 10pt/10pt not 10pt, else get ghosting in IE6 */
+  font: italic bold 10pt/10pt Arial, sans-serif;
+  letter-spacing: 0.25em;
+  margin: -9px -9px 20px;
+  padding: 6px 0 6px 10px;
+}
+h1,h2,h3,h4 {
+  font: normal bold medium Arial, sans-serif;
+  letter-spacing: 0.25em;
+}
+h1 {
+  color: #009;
+  margin: 0 0 0.5em 12pt;
+  padding-top: 0;
+  font-size: 18pt;
+}
+h2 {
+  margin: 0 0 0.5em 12pt;
+  padding-top: 0.8em;
+  font-size: 16pt;
+}
+h3 {
+  margin: 2em 0 0.5em 14px;
+  font-size: medium;
+  letter-spacing: 0.2em;
+  text-decoration: underline;
+}
+h4 {
+  margin: 0.75em 0 0.25em 14px;
+  font-size: 12pt;
+  letter-spacing: 0em;
+  text-decoration: none;
+}
+div.title {
+  margin: 0.4em 0 0.3em 14px;
+  font: normal bold 12pt Arial, sans-serif;
+  letter-spacing: 0.2em;
+}
+
+hr {
+  margin: 0 0 0 14px;
+  border-color: #009;
+  border-style: solid;
+}
+
+p,form {margin: 0 1em 1em;}
+
+div.ulist, div.olist {
+  margin-left: 14px;
+}
+ul,ol {
+  padding: 0 0;
+  margin-left: 1.25em;  /* for Konqueror 3 misbehavior*/
+  margin-top: 0.5em;
+  list-style-position: outside;
+}
+ol { list-style-image: none; }
+ul { list-style-image: url(images/tick.png); }
+li { padding-bottom: 0.2em; }
+dl { padding: 0 1em; }
+dt { font-style: normal; font-weight: bold; }
+dd { padding-bottom: 0.5em; }
+em { font-weight: bold; font-style: normal;}
+
+ol.olist2 {
+  list-style-type: lower-alpha;
+ }
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div.tableblock table, div.hlist table {
+  border: 2px solid #fa0;
+  margin: 0.5em 5% 1em 14px;
+  background: #ffffee;
+}
+table.tableblock th {
+  font-family: sans-serif;
+}
+
+p.table, li p, dd p {
+  margin: 0.1em 0 0.3em 0;
+}
+
+li img {
+  margin-top: 8px;
+/*
+  border: 2px solid #fa0;
+*/
+}
+
+div#header { margin: 20px 0 0 20px;}
+div#footer { 
+  clear: both;
+  background: #f0f0f0;
+  font: 8pt sans-serif;
+  margin: 0 25px 0 150px;
+  padding: 1px 0;
+  position: relative;     /* IE6 loses paragraph without this. */
+  bottom: 0;
+  border-top: gray;
+}
+div#footer p {margin: .5em 0 0 15px;}
+div#footer a {background: transparent; text-decoration: underline;}
+div#badges {padding: 0 12px 5px 12px;}
+div#badges td {vertical-align: middle;}
+div#badges img {padding-right: 20px; border-style: none;}
+div.image {
+  border-style: none;
+}
+div.imageblock {
+  margin: 0.5em -9px 1em 14px;
+}
+div.imageblock img {
+/*
+  border: 2px solid #fa0;
+*/
+}
+/* image caption */
+p.caption {
+  font-style: italic;
+}
+div.image-right {
+  float: right;
+  border-style: none;
+  margin: 15px -9px 0px 0px;
+}
+p.imagetitle {
+  margin-top: 0.2em;
+  margin-bottom: 1.5em;
+}
+a.image > img:hover { border: 2px solid #fa0; } /* IE6 broken */
+a.image > img { border: 2px solid transparent; }
+a.image {
+  /* Don't use text link colors. */
+  background: transparent;
+  color: white;
+}
+
+div.literalparagraph { margin: 0 1em; }
+div.literalblock { margin: 0 1em; }
+div.listingblock   {
+  background: #e8e8e8;    /* Light gray */
+  margin: 0 5%;
+  padding: 0.5em;
+}
+div.sidebarblock {
+  background: #ffffee;
+  margin: 0.5em -9px 1em 14px;
+  padding: 0.5em 1em;
+  border: 2px solid #fa0;
+}
+div.sidebarblock p { margin-left: 0; }
+div.sidebarblock * { padding-left: 0; }
+div.sidebarblock div { margin: 0; }
+div.sidebar-title { font-family: sans-serif; font-weight: bold; font-style: italic; }
+
+div.quoteblock {
+  margin: 0.5em 35% 0.5em 14px;
+  padding: 0;
+}
+div.quoteblock p { font: italic medium serif; }
+div.quoteblock p { margin-left: 0; }
+div.quoteblock * { padding-left: 0; }
+div.quoteblock div { margin: 0; }
+
+div.admonitionblock {
+  margin: 0 0 0.5em 14px;
+}
+div.admonitionblock div.title {
+  margin: 0;
+  font: normal bold 12pt Arial, sans-serif;
+  letter-spacing: 0.2em;
+}
+div.admonitionblock td.content {
+  margin: 0;
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+span.smallnew {
+  color: navy;
+  font-size: 0.75em;
+  font-family: Arial,sans-serif;
+}
+
+/* Display for browsers that don't understand stylesheets. */
+.ahem { display: none; }
+
+p.under-construction {
+  color: red;
+  font: bold medium sans-serif;
+}
+
+/* Print nicely. */
+@media print {
+  h1,h2,h3,h4 { page-break-after: avoid; page-break-inside: avoid }
+  blockquote,pre { page-break-inside: avoid }
+  ul,ol,dl { page-break-before: avoid }
+  /* Override existing property settings. */
+  h1,a { color: black; background: white; }
+  div#header { margin: 20px 0 0;}
+  div#content { margin: 0; border: 0; }
+  div#menu, div#footer { display: none; }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">August 2015</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="sect1">
+<h2 id="_windows_10_newsletter">Windows 10 Newsletter</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Windows 10</em> was officially released at the end of July&#32;&#8212;&#32;this
+special newsletter is for users thinking about or planning on
+upgrading their PCs to <em>Windows 10</em>.</p></div>
+<div class="paragraph"><p>We&#8217;ve been testing the PRS on <em>Windows 10</em> for some months and would
+like to pass on a few things you need to be aware of to get the most
+out of the PRS on <em>Windows 10</em>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="win10-1709">Windows 10 version 1709 update issues</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>Updated November 2017</strong></p></div>
+<div class="paragraph"><p>Late 2017 Microsoft began rolling out <em>Windows 10, version 1709</em> (also
+known as the <em>Fall Creators Update</em>).  This major update has introduced
+two compatibility issues, fortunately they are easily fixed.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">You can check which version of Windows you are running by
+<a href="https://support.microsoft.com/en-nz/help/13443/windows-which-operating-system">following
+these instructions</a>.</td>
+</tr></table>
+</div>
+<div class="sect2">
+<h3 id="_issue_1">Issue 1</h3>
+<div class="paragraph"><p>When you start the PRS you get the following error message:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-prs-error.png" alt="win10-prs-error.png" />
+</div>
+</div>
+<div class="paragraph"><p><strong>To fix</strong> see <a href="http://prshq.com/runtime.html">Reinstalling the PRS
+Runtime</a> on the PRS website for step-by-step instructions.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_issue_2">Issue 2</h3>
+<div class="paragraph"><p>When you attempt to send an email message from the PRS you get the
+following error message:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="outlook-imessage-error.png" alt="outlook-imessage-error.png" />
+</div>
+</div>
+<div class="paragraph"><p><strong>To fix</strong> you need to do a <em>Quick repair</em> of Microsoft Office, see
+<a href="https://support.office.com/en-us/article/Repair-an-Office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b">Repair
+Office from the Control Panel</a> for instructions.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_exclude_the_prs_from_windows_defender_em_real_time_protection_em">1. Exclude the PRS from Windows Defender <em>Real Time Protection</em></h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>Windows Defender</em> is the Windows Antivirus program. It has a feature
+called <em>Real Time Protection</em> which scans all files as they are opened&#32;&#8212;&#32;this really slows the PRS down.</p></div>
+<div class="paragraph"><p>You should configure <em>Windows Defender</em> to exclude the PRS process. We
+found that this was necessary regardless of previous <em>Windows
+Defender</em> settings (the <em>Windows 10</em> upgrade did not seem to carry
+through previous exclusion settings).</p></div>
+<div class="paragraph"><p>Here&#8217;s how:</p></div>
+<div class="paragraph"><p>First open <em>Windows Defender Settings</em> and click on the <em>Add and
+exclusion</em> link:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-defender-settings-1.png" alt="win10-defender-settings-1.png" />
+</div>
+</div>
+<div class="paragraph"><p>Click on the <em>Exclude a .exe, .com or .scr process</em> link and add the
+following file:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>C:\Program Files (x86)\Microsoft Office\ART\Office\MSACCESS.EXE</code></pre>
+</div></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-defender-settings-2.png" alt="win10-defender-settings-2.png" />
+</div>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you do not do this the PRS will perform poorly on all
+but the smallest databases.</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_reinstall_the_prs_runtime">2. Reinstall the PRS Runtime</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>After upgrading a machine that was running the PRS you will need to
+reinstall the PRS Runtime.  If you do not you will received the
+following error when you start the PRS under <em>Windows 10</em>:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-prs-error.png" alt="win10-prs-error.png" />
+</div>
+</div>
+<div class="paragraph"><p>See <a href="http://prshq.com/runtime.html#X3">Reinstalling the PRS Runtime</a> on
+the PRS website for step-by-step instructions.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_check_the_region_settings">3. Check the Region settings</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Sometimes the Regional settings do not get carried through by the
+<em>Windows 10</em> upgrade process; this can result in:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Incorrect date formats and printer paper size.
+</p>
+</li>
+<li>
+<p>
+PRS errors when attempting to enter dates.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Open <em>Region &amp; Language Settings</em>: The country should be set to your
+country and your countries language should be the default language
+pack (the <em>default</em> language is the first language listed), for
+example <em>English (New Zealand)</em> below:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-region-settings-2.png" alt="win10-region-settings-2.png" />
+</div>
+</div>
+<div class="paragraph"><p>Next, open the <em>Region</em> applet in the Windows <em>Control Panel</em>: The
+<em>Format</em> should be set to <em>Match Windows display language
+(recommended)</em> your language displayed, for example:</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="win10-region-settings-1.png" alt="win10-region-settings-1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_check_the_printer_paper_size">4. Check the Printer paper size</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>If every second page of printed PRS reports are blank then you should
+check your printer paper size is set to <em>A4</em>&#32;&#8212;&#32;we found paper sizes
+reverted to <em>US Letter</em> on some printers after a <em>Windows 10</em> upgrade.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_need_help">Need help?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Our <a href="http://prshq.com/support.html">Support</a> web page
+explains how to get answers to PRS questions and includes links to
+articles on <a href="http://prshq.com/maintenance.html">Maintaining
+Database Reliability and Performance</a> and
+<a href="http://prshq.com/best_practice_deployment.html">PRS Best
+Practice Deployment</a>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you no longer wish to receive this newsletter please
+email <a href="mailto:support@prshq.com">support@prshq.com</a> with the word <em>UNSUBSCRIBE</em> in
+the subject line.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>

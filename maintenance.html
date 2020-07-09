@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+<title>Maintaining Database Reliability and Performance</title>
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<h1>Maintaining Database Reliability and Performance</h1>
+<div class="sect1">
+<h2 id="_contents">Contents</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="#X1">Troubleshooting Guide</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#X2">Steps to maintain database reliability</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#X3">Performance</a>
+</p>
+</li>
+<li>
+<p>
+<a href="#X4">Opportunistic Locking</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X1">Troubleshooting Guide</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Multi-user databases such as the PRS rely on the proper functioning of
+the shared database server, user workstations and the intervening
+network. If you are experiencing problems the first task is to figure
+out the source of the problem:</p></div>
+<div class="sect2">
+<h3 id="_the_problem_is_confined_to_a_single_workstation">The problem is confined to a single workstation</h3>
+<div class="paragraph"><p>Skip to the <a href="#X5">next section</a> if the problem occurs on all
+workstations.</p></div>
+<div class="paragraph"><p>First check the PRS <em>Shared data folder</em> and <em>Documents folder</em>
+locations match the other workstation (you&#8217;ll find these options on
+the <em>File Locations</em> page of the <em>Tools&#8594;Options</em> menu command dialog).
+If the file locations are OK you should fully reinstall the PRS
+Runtime and the PRS Client:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+<a href="runtime.html">Reinstall the PRS Runtime</a>.
+</p>
+</li>
+<li>
+<p>
+Once the runtime has been reinstalled <a href="updates.html#X1">download
+  and install the latest PRS client</a>.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>If this does not resolve your problem then the problem is external to
+the PRS, in other words: there is a</p></div>
+</div>
+<div class="sect2">
+<h3 id="X5">The problem occurs on all PRS Client workstations</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+If the problem is sluggish performance you should read the section
+  on <a href="#X3">Performance</a>.
+</p>
+</li>
+<li>
+<p>
+If you are getting <em>Disk or network errors</em> error messages then you
+  really do have disk or network problems and should consult your
+  system administrator.
+</p>
+</li>
+<li>
+<p>
+If necessary <a href="#X6">compact and repair your database</a>.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="X6">How to compact and repair your PRS database</h3>
+<div class="paragraph"><p>To ensure your shared shared PRS database contains no inconsistencies
+run a <em>compact and repair</em> over the data. Here&#8217;s how:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Ask all users to close the PRS.
+</p>
+</li>
+<li>
+<p>
+Open the <em>PRS Monitor</em> program&#8201;&#8212;&#8201;you will find it in the
+   <em>Programs</em> section of the <em>Windows Start Menu</em> under <em>PRS 2000</em>
+   (it&#8217;s called <em>PRS Monitor</em> and has a binoculars icon).
+</p>
+</li>
+<li>
+<p>
+When the PRS Monitor opens check there are no <em>Computer names</em>
+   listed&#8201;&#8212;&#8201;if you do see computer names listed and everyone really
+   has closed the PRS then you&#8217;ll need to kill the orphaned database
+   locks using the the PRS Monitor <em>Tools&#8594;Kill Database Locks</em> menu
+   command.
+</p>
+</li>
+<li>
+<p>
+Run the PRS Monitor <em>File&#8594;Compact and Backup Database</em> menu
+   command. Depending on the size of your database this command may
+   take a few minutes to complete (don&#8217;t worry though, it will tell
+   you when it&#8217;s finished).
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>If the PRS Monitor <em>Compact and Backup Database</em> command does not fix
+the problem use the <em>PRS Monitor</em> to rebuild the database with the
+<em>Tools&#8594;Rebuild Database</em> menu command. This takes longer than a
+compact and backup but it completely rebuilds the database files.  To
+rebuild your shared PRS database:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Log off all PRS users.
+</p>
+</li>
+<li>
+<p>
+Open the <em>PRS Monitor</em> (<em>Start&#8594;Programs&#8594;PRS 2000&#8594;PRS Monitor</em>).
+</p>
+</li>
+<li>
+<p>
+Run the PRSMon <em>Tools&#8594;Rebuild Database&#8230;</em> command.
+</p>
+</li>
+<li>
+<p>
+When prompted for the rebuild number enter the version number of
+  your database (the <em>shared data</em> version number displayed by the PRS
+  <em>Help&#8594;About PRS</em> menu command).
+</p>
+</li>
+<li>
+<p>
+Wait until the the PRS Monitor tells you it&#8217;s finished before
+  logging back on to the PRS.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>If you still have a corrupt database check out
+<a href="http://support.microsoft.com/kb/209137/EN-US/">How to troubleshoot and
+repair a damaged Jet 4.0 database in Access 2000</a> on the Microsoft
+website.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_still_not_sorted">Still not sorted?</h3>
+<div class="paragraph"><p>If you&#8217;ve been through the above checklist and your problem still
+persists check out our <a href="support.html">Support</a> page&#8201;&#8212;&#8201;it explains
+how to send us a problem report.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X2">Steps to maintain database reliability</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Steps you can take to avoid data errors and data corruption include:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Don&#8217;t unplug network cables, press the PC reset button or turn off
+  the PC power while the PRS is open.
+</p>
+</li>
+<li>
+<p>
+Fatal system errors almost always cause abnormal termination. If
+  your computer is prone to fatal errors, you should resolve the
+  source of the errors.
+</p>
+</li>
+<li>
+<p>
+<a href="#X6">Compact the database</a> regularly using the PRS Monitor program
+  (PRSMon).
+</p>
+</li>
+<li>
+<p>
+Do not attempt to open the PRS shared database with other
+  applications&#8201;&#8212;&#8201;use a copy instead (run the PRS Monitor <em>File&#8594;Make
+  Offline Copy</em> menu command to create a copy).
+</p>
+</li>
+<li>
+<p>
+Turn off anti-virus background scanning of the shared PRS database.
+</p>
+</li>
+<li>
+<p>
+Use robust, reliable hardware&#8201;&#8212;&#8201;database application reliability is
+  only as good as file server and network. Databases are more network
+  intensive than other applications, consequently intermittent
+  hardware problems are much more likely to show up in database
+  applications such as the PRS.
+</p>
+</li>
+<li>
+<p>
+Disable <a href="#X4">opportunistic locking</a> on all PRS client PCs or the
+  server hosting the PRS shared database.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>In addition you should also:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Verify that the latest operating system service pack is installed.
+</p>
+</li>
+<li>
+<p>
+Verify that the latest Microsoft Jet Service Pack is installed on
+  all clients (the PRS client install should ensure the correct
+  service pack is installed).
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X3">Performance</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>PRS performance is primarily determined by:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The speed of the PC running the PRS Client (the PC you work from).
+</p>
+</li>
+<li>
+<p>
+The performance of your local area network that connects the PRS
+  client to your shared PRS database.
+</p>
+</li>
+<li>
+<p>
+Other programs that may be hogging the PC and network resources.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>The speed of you client PC will have a major impact on performance,
+aim for a 2.8GHz Pentium processor and 1GB RAM.</p></div>
+<div class="paragraph"><p>Use a 100Mbps or 1GBps wired local area network. Wireless networks do
+work but can be problematic&#8201;&#8212;&#8201;the actual throughput of a wireless
+network is typically a less than a third the advertised theoretical
+speed and slows even further when more wireless users are in the
+general vicinity. As with any radio system wireless networks are
+subject to interference which will generate network errors. As a
+general rule a wired Ethernet local area network will always
+outperform a wireless network.</p></div>
+<div class="paragraph"><p>The PRS works on  peer-to-peer networks, but there are performance
+implications, especially when there are more than justs a few users
+(here&#8217;s what
+<a href="http://msdn.microsoft.com/en-us/library/office/aa141445(v=office.10).aspx">Microsoft
+has to say</a>).</p></div>
+<div class="paragraph"><p>Make sure your PC anti-virus software does not scan PRS related files
+every time they are accessed. This anti-virus feature (sometimes
+called <em>on access scanning</em>) will not only result in severe database
+and document indexer performance losses but can also result in
+database corruption and document indexer errors.  The following
+folders should be excluded from on access scanning:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The PRS shared data folder (containing the shared PRS database).
+</p>
+</li>
+<li>
+<p>
+The PRS shared documents folder (containing the document indexes).
+</p>
+</li>
+<li>
+<p>
+The PRS Client application folder (normally <code>C:\Program
+  Files\prs2k</code>).
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X4">Opportunistic Locking</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The PRS Client installer has an option to disable client oplocks on
+Windows workstations&#8201;&#8212;&#8201;<strong>you should select this option</strong> when
+installing the PRS Client.</p></div>
+<div class="paragraph"><p>We also recommend that you disable opportunistic on the server that
+hosts the PRS shared database. See
+<a href="http://support.microsoft.com/?id=296264">Configuring opportunistic
+locking in Windows</a>.</p></div>
+<div class="sect2">
+<h3 id="_explanation_of_the_oplocks_problem">Explanation of the oplocks problem</h3>
+<div class="paragraph"><p>There is a well known issue when running applications on a Windows
+workstation computer that can affect any application attempting to
+access shared database files across a network. This is a result of a
+default setting configured in the Windows operating system. When a
+workstation attempts to access shared data files located on another
+Windows computer, the Windows operating system will attempt to
+increase performance by locking the files and caching information
+locally. When this occurs, the application is unable to properly
+function, which can result in database errors or even database
+corruption.</p></div>
+<div class="paragraph"><p>The <em>oplocks problem</em> affects all file based multi-user database
+applications and is not peculiar to the PRS.</p></div>
+<div class="paragraph"><p>A more detailed explanation of the <em>oplocks problem</em> can be found at
+<a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/locking.html">http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/locking.html</a>.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:38:46 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

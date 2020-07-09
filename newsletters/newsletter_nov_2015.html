@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">November 2015</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>We&#8217;ve just released PRS 8.1.8. To download and install this
+recommended upgrade go to the
+<a href="http://prshq.com/updates.html#X1">Installing the Latest PRS Client</a>
+section on our <em>Updates</em> web page and follow the instructions.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_8217_s_new_in_prs_8_1_8">What&#8217;s New in PRS 8.1.8</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>A lot of work has gone into this release (most of it under the hood)
+including a completely revamped logging system and lots of
+optimizations for larger databases (over 100K personnel records).</p></div>
+<div class="paragraph"><p>For a full list of the changes since the previous release see the
+<a href="http://prshq.com/changelog.html">PRS Changelog</a> web page.</p></div>
+<div class="sect2">
+<h3 id="_support_for_sms_gateway_api">Support for SMS Gateway API</h3>
+<div class="paragraph"><p><span class="smallnew"><span class="image">
+<img src="../images/smallnew.png" alt="../images/smallnew.png" />
+</span> in version 8.1.8</span></p></div>
+<div class="paragraph"><p>If you have an Android phone and are subscribed to the PRS SMS option
+you can now send SMS messages through your phones via a free
+<a href="https://smsgateway.me/">SMS Gateway API</a> account:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Unlike traditional SMS Gateways such as Clickatell the SMS messages
+  go out through your phone so there are no additional messaging
+  charges other than those you normally incur.
+</p>
+</li>
+<li>
+<p>
+Because the messages are sent from your phone there are no caller ID
+  blocking issues (traditional SMS Gateways sometimes have blocking
+  issues sending through local carrier networks).
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Once you have configured and added your phone(s) to the SMS Gateway
+API account you can configure the PRS to use the SMS Gateway API.</p></div>
+<div class="paragraph"><p>First, logon as PRS Supervisor (<em>File&#8594;Logon&#8594;Supervisor</em> menu
+command) then open the SMS configuration dialog (<em>Tools&#8594;Setup&#8594;SMS
+Texting and Phone Calls</em>):</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="sms-gateway-api-setup.png" alt="sms-gateway-api-setup.png" />
+</span></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Send SMS messages using <em>HTTP Server</em>.
+</p>
+</li>
+<li>
+<p>
+Enter your phone&#8217;s SMS Gateway API device address.
+</p>
+</li>
+<li>
+<p>
+Select <em>SMS Gateway API (https://smsgateway.me/)</em> SMS Service (you
+   will be prompted to enter your account credentials).
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_new_logging_system">New Logging System</h3>
+<div class="paragraph"><p><span class="smallnew"><span class="image">
+<img src="../images/smallnew.png" alt="../images/smallnew.png" />
+</span> in version 8.1.8</span></p></div>
+<div class="paragraph"><p>The PRS logging system has received a lot of attention:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+All user transactions are recorded.
+</p>
+</li>
+<li>
+<p>
+Lots of new database consistency checks have been added around
+  database updates and deletions&#32;&#8212;&#32;any inconsistencies are logged.
+</p>
+</li>
+<li>
+<p>
+All errors reported to the user are logged.
+</p>
+</li>
+<li>
+<p>
+When you send us a PRS support email (using the PRS <em>Help&#8594;EMail PRS
+  Support&#8230;</em> menu command) you have the option to include the latest
+  log file.
+</p>
+</li>
+<li>
+<p>
+There&#8217;s a new Log viewer: You can view the latest log entries by
+  clicking the <em>View Log</em> button on the <em>Security</em> page of the PRS
+  <em>Tools&#8594;Options&#8230;</em> menu command (you have to log in as Supervisor
+  to access this function).
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_goto_commands_reimplemented">Goto Commands reimplemented</h3>
+<div class="paragraph"><p><span class="smallnew"><span class="image">
+<img src="../images/smallnew.png" alt="../images/smallnew.png" />
+</span> in version 8.1.8</span></p></div>
+<div class="paragraph"><p>To accommodate scaling in large databases we&#8217;ve reimplemented the
+<em>Goto</em> commands and some related <em>Goto List</em> and form <em>Lock/Unlock</em>
+behaviour&#32;&#8212;&#32;everything still works the same but there are a few
+subtle differences:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+When you "Goto" a record the underlying form is filtered to a
+  single target record (use a <em>Find</em> command to locate more than one
+  record).
+</p>
+</li>
+<li>
+<p>
+There&#8217;s been a minor change to the Lock/Save/Unlock command (<em>F4</em>
+  shortcut key): If you have unlocked and edited a record then the
+  Lock command saves the record and the Lock turns orange, you can
+  continue editing without having to first unlock the record. As
+  usual, moving to another record automatically saves and locks the
+  form.
+</p>
+</li>
+<li>
+<p>
+The <em>F5</em> shortcut key adds the current record to the <em>Goto List</em>, if
+  the <em>Goto List</em> is not open <em>F5</em> opens it (same as before).  The
+  <em>F5</em> shortcut also works if the form is in Datasheet View and could
+  be used as an alternative to tagging.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips_and_tricks">Tips and Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_document_search_tool_tips">Document Search Tool tips</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Update your document search index regularly using the
+  <em>Tools&#8594;Setup&#8594;Document Search Index&#8230;</em> menu command to keep your
+  searches up to date.
+</p>
+</li>
+<li>
+<p>
+Blue document names displayed in the <em>Document Search Tool</em> indicate
+  that the document is linked to a PRS Personnel record&#32;&#8212;&#32;you can go
+  straight to that record by holding down the <em>Ctrl</em> key then clicking
+  on the green <em>Goto button</em> next to the document name.
+</p>
+</li>
+<li>
+<p>
+Press the <em>F9</em> shortcut key to open the Document Search Tool, press
+  the <em>Esc</em> key to close it.
+</p>
+</li>
+<li>
+<p>
+Tick the <em>Show document folder names</em> checkbox to view the full
+  document path names.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>

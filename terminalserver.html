@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+<title>PRS and Microsoft Terminal Services</title>
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<h1>PRS and Microsoft Terminal Services</h1>
+<div class="sect1">
+<h2 id="_installing_prs_clients_on_a_terminal_server">Installing PRS Clients on a Terminal Server</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+A separate instance of the PRS Client must be installed for each
+  user (users cannot share the same executables). This means selecting
+  a separate installation directory each time you run the PRS Client
+  Setup Wizard. You also need to ensure separate PRS client desktop startup
+  icons for each user which point to the user&#8217;s copy of the PRS
+  client.
+  We recommend a separate folder for all PRS client (e.g.
+  <code>C:\prs_clients</code>), each user&#8217;s client is then installed to a
+  sub-folder e.g. <code>C:\prs_clients\tom</code>, <code>C:\prs_clients\dick</code>, &#8230;
+</p>
+</li>
+<li>
+<p>
+When you try to install the PRS Runtime (Access 2000 Runtime) you
+  may receive the following error message: <em>Some default settings in
+  Microsoft Access 2000 Runtime setup do not work properly on a
+  Windows Terminal Server. To install Access Runtime on a Terminal
+  Server, you must use the instruction and tools available in your
+  Office Resource Kit or at HTTP://www.Microsoft.com/office/ork</em>&#8201;&#8212;&#8201;  in this case you need to install the runtime manually with the
+  <em>Microsoft Access 2000 Runtime Transform for Terminal Server</em>
+</p>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Download the Access 2000 Runtime for Terminal Server Transform
+  (<code>Termsrvr_ART.mst</code>) from the
+  <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=c01725e4-926e-4c6a-b389-818ca4c27971">Microsoft
+  Web site</a>.
+  (alternatively you can find it in the <code>resources</code> folder on the PRS
+  installation CD-ROM).
+</p>
+</li>
+<li>
+<p>
+Log on to your Terminal Server using an account with Administrative
+  rights.
+</p>
+</li>
+<li>
+<p>
+Open a <em>Command Prompt</em> window.
+</p>
+</li>
+<li>
+<p>
+Create the folder <code>C:\Program Files\ORKTools\Toolbox\Tools\Terminal
+  Server Tools</code> if it does not already exist (or you can use the
+  folder that you put your MST files).
+</p>
+</li>
+<li>
+<p>
+Copy the <code>Termsrvr_ART.mst</code> file to the folder selected in the
+  previous step.
+</p>
+</li>
+<li>
+<p>
+Change to the <code>prs_runtime</code> folder (either on the PRS CD-ROM or
+  a copy that you have downloaded and unzipped (see
+  <a href="http://prshq.com/runtime.html">PRS Runtime</a>) and run the
+  following command:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><code>SETUP.EXE TRANSFORMS="C:\Program Files\ORKTools\Toolbox\Tools\Terminal Server Tools\Termsrvr_ART.mst"</code></pre>
+</div></div>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">Transforms can be applied only when you initially deploy the
+Microsoft Access Runtime. You cannot reapply a new transform to an
+existing installation.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>See also:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://office.microsoft.com/en-us/ork2000/HA011524631033.aspx">http://office.microsoft.com/en-us/ork2000/HA011524631033.aspx</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://support.microsoft.com/kb/244439">http://support.microsoft.com/kb/244439</a>
+</p>
+</li>
+</ul></div>
+</div></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automating_prs_client_installation">Automating PRS Client installation</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Manually installing more than a few PRS Clients is tedious, disruptive
+and time consuming.  An easiest way to manage the installation of PRS
+Client updates is to run the PRS Client Setup Wizard from a script
+(e.g. using Microsoft Powershell) and use the setup wizard
+<a href="http://unattended.sourceforge.net/InnoSetup_Switches_ExitCodes.html">command-line
+options</a>. For example, the following command will silently install the
+PRS Client in <code>C:\prs\tom</code>:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>prs2k_client_setup_803.exe /verysilent /tasks=desktopicon\user /dir="c:\prs\tom"</code></pre>
+</div></div>
+<div class="paragraph"><p>This command would be repeated for each user installation. The install
+wizard <code>/tasks=desktopicon\user</code>  option installed the Desktop startup
+icon for the current user. This next example is the same as the
+previous example except that no Desktop icon is installed:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>prs2k_client_setup_803.exe /verysilent /tasks=!desktopicon /dir="c:\prs\tom"</code></pre>
+</div></div>
+<div class="paragraph"><p>In this case your script would need to create a separate Desktop
+shortcut for each user to the <code>prs_startup.exe</code> executable in the
+users PRS Client install folder.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">The setup wizard executes asynchonously i.e. when the wizard is
+run it launches the installer and returns immediately without waiting
+for the install to complete.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:39:35 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

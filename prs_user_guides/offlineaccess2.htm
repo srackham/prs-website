@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Offline Access</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Offline Access">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?offlineaccess2.htm"; }
+  else { parent.quicksync('a3.13'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">Offline Access</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="htmlandxmltemplates.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="toplevelintroduction.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="vacancy_and_personnel_custom_f.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>PRS <span style="font-weight: bold;">Offline Access</span> feature allows PRS clients, typically laptop PCs, to use a local copy of the shared database when they are not connected to the network (the PRS Essential Reference explains how to use <a href="offlineaccess.htm">Offline Access</a>).</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Before PRS client PCs can use Offline Access the administrator must make available copies of the shared database. These copies are acquired automatically by those PRS client PCs that have been set up for Offline Access (using the <span style="font-weight: bold;">Tools-&gt;Setup-&gt;Offline Access...</span> menu command). </p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p><img src="clip0024.png" width="350" height="194" border="0" alt=""></p>
+<p>The easiest way to make server-side copies of the shared data is to use the PRSMon <a href="prsmoncommands.htm">Make Offline Copy</a> command. Perform server-side copying regularly so offline data is always relatively up to date.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>You can use the Windows <span style="font-weight: bold;">Task Scheduler</span> to perform regular offline copying. See the <span style="font-weight: bold;">PRSMon Administration Program</span> section for details of <a href="schedulingprsmonbackups.htm">how to use PRSMon in conjunction with the Task Scheduler</a>.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>If you want to script your own server-side coping, here's how:</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Copy the shared database file <span style="font-size: 10pt; font-family: 'Courier New';">prs_data.mdb</span> to a file named <span style="font-size: 10pt; font-family: 'Courier New';">prs_data_copy.mdb</span> (in the shared data directory).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Copy the shared database file <span style="font-size: 10pt; font-family: 'Courier New';">prs_mail.mdb</span> to a file named <span style="font-size: 10pt; font-family: 'Courier New';">prs_mail_copy.mdb</span> (in the shared data directory).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Copy the shared database file <span style="font-size: 10pt; font-family: 'Courier New';">prs_notes.mdb</span> to a file named <span style="font-size: 10pt; font-family: 'Courier New';">prs_notes_copy.mdb</span> (in the shared data directory).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Copy the shared database INI file <span style="font-size: 10pt; font-family: 'Courier New';">prs_data.ini</span> to a file named <span style="font-size: 10pt; font-family: 'Courier New';">prs_data_copy.ini</span> (in the shared data directory). The shared data INI file may or may not exist, depending on the global PRS configuration settings, so don't assume it will always be present.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The client PRS expects to find a file named <span style="font-size: 10pt; font-family: 'Courier New';">prs_data_copy.mdb</span> in the shared PRS data directory when it does an <span style="font-weight: bold;">Offline Access</span> update.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 12pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Copying must take place when the PRS is not in use to ensure the integrity of the copied file. We recommend automating the copying so that it takes place after nightly backups when all users will have been logged out of the PRS (see <span style="font-weight: bold;">Backing up the PRS</span> below).</td></tr></table></div><p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>

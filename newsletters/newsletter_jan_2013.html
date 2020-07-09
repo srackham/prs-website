@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">January 2013</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Happy New Year to everyone, this short newsletter is a heads-up for a
+couple of Windows sysadmin issues that can trip up the unwary.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips_and_tricks">Tips and Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_anti_virus_software_can_cause_performance_problems">Anti-virus software can cause performance problems</h3>
+<div class="paragraph"><p>If you are experiencing slow PRS startup and even startup timeout
+errors (<em>Error 32000: User not logged in</em>) it may be caused by your
+anti-virus software configuration&#32;&#8212;&#32;make sure your PC anti-virus
+software does not scan PRS related files whenever they are accessed.</p></div>
+<div class="paragraph"><p>You should configure your AV software to exclude files from the PRS
+install and shared database folders or alternatively exclude files
+with <em>MDB</em>, <em>MDE</em> and <em>LDB</em> file name extensions.</p></div>
+<div class="paragraph"><p>Windows 8 is problematic because it comes with <em>Windows Defender</em>
+installed and configured to scan all files. Here is a screen-shot of a
+properly configured <em>Windows Defender</em> (the same configuration should
+be applied you use <em>Microsoft Security Essentials</em> on previous
+versions of Windows):</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="defender-config.png" alt="defender-config.png" />
+</div>
+</div>
+<div class="paragraph"><p>We&#8217;ve found that this simple configuration change speeds startup by
+between 400% and 800%.</p></div>
+<div class="paragraph"><p>See also the
+<a href="http://prshq.com/prs_user_guides/anti_virussoftware.htm">PRS
+Administration Guide</a>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_windows_offline_files_can_disrupt_database_file_access">Windows Offline Files can disrupt database file access</h3>
+<div class="paragraph"><p>If one PC seems to be viewing different PRS data to the other PCs even
+though the <em>Shared Data Folder</em> location is set the same on all PCs
+(for example, changes made from one PC cannot be seen on the other PCs
+and vice versa) this is probably because the Window&#8217;s <em>Offline Files</em>
+has been configured to include PRS database files resulting in a
+separate local copy of the database.</p></div>
+<div class="paragraph"><p><strong>Do not synchronise PRS database and documents files using Microsoft&#8217;s
+<a href="http://windows.microsoft.com/en-NZ/windows-vista/Understanding-offline-files">Offline
+Files</a> feature</strong> (not to be confused with the PRS <em>Offline Access</em>
+feature).</p></div>
+<div class="paragraph"><p><a href="http://answers.microsoft.com/en-us/windows/forum/windows_7-files/how-to-diable-offline-file-sync/c98dd797-a3a4-41a6-86cd-6beb9d4fca34">This
+post</a> explains how to disable Windows <em>Offline Files</em>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_need_help">Need help?</h3>
+<div class="paragraph"><p>Our <a href="http://prshq.com/support.html">Support</a> web page
+explains how to get answers to PRS questions and includes links to
+articles on <a href="http://prshq.com/maintenance.html">Maintaining
+Database Reliability and Performance</a> and
+<a href="http://prshq.com/best_practice_deployment.html">PRS Best
+Practice Deployment</a>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you no longer wish to receive this newsletter please
+email <a href="mailto:support@prshq.com">support@prshq.com</a> with the word <em>UNSUBSCRIBE</em> in
+the subject line.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">June 2013</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>We&#8217;ve just released PRS 8.1.1. This is a recommended upgrade,
+especially if you are using Microsoft Office 2013 as it fixes an
+Outlook 2013 incompatibility.</p></div>
+<div class="paragraph"><p>To download and upgrade go to the
+<a href="http://prshq.com/updates.html#X1">Installing the Latest PRS Client</a>
+section on our <em>Updates</em> web page and follow the instructions.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_8217_s_new_in_prs_8_1_1">What&#8217;s New in PRS 8.1.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_linked_documents_path_and_file_name_customisation">Linked documents path and file name customisation</h3>
+<div class="paragraph"><p><span class="smallnew"><span class="image">
+<img src="../images/smallnew.png" alt="../images/smallnew.png" />
+</span> in version 8.1.1</span></p></div>
+<div class="imageblock">
+<div class="content">
+<img src="linked-documents-path-options.png" alt="linked-documents-path-options.png" />
+</div>
+</div>
+<div class="paragraph"><p>When you save a linked document or email attachment the PRS prompts
+you to save it in the shared documents folder, if you always save
+to a particular sub-folder you are left with extra mouse clicks to get
+there.  The new
+<a href="http://prshq.com/prs_user_guides/document_save_folder.htm">Document
+save folder</a> option eliminates this inconvenience by allowing you to
+specify your own default document save folder.</p></div>
+<div class="paragraph"><p>The PRS&#8217;s file naming convention for saved documents doesn&#8217;t suit
+everyone so we&#8217;ve introduced the new
+<a href="http://prshq.com/prs_user_guides/document_file_name_format.htm">Document
+file name format</a> option which allows you to specify the file
+naming convention for linked document files that best suits your
+company.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_new_delivery_option_for_sms_messages">New delivery option for SMS messages</h3>
+<div class="paragraph"><p><span class="smallnew"><span class="image">
+<img src="../images/smallnew.png" alt="../images/smallnew.png" />
+</span> in version 8.1.1</span></p></div>
+<div class="paragraph"><p>Ever wished you could send SMS messages from the PRS via your own
+phone?  Our new
+<a href="http://prshq.com/prs_user_guides/smsandphoneoptions.htm">HTTP SMS
+delivery option</a> can be configured to work with many and smartphone
+(and Cloud-based)  HTTP gateways&#32;&#8212;&#32;all you need to do is enter the
+correct server parameters for your chosen gateway in the PRS <em>SMS
+Texting and Phone Calls</em> dialog.</p></div>
+<div class="imageblock">
+<div class="content">
+<img src="sms-http-options.png" alt="sms-http-options.png" />
+</div>
+</div>
+<div class="paragraph"><p>A smartphone based SMS gateway is an application that runs on your
+smartphone and accepts SMS messages sent wirelessly from your PC.
+Cloud-based SMS gateways are hosted on the Internet. The new <em>HTTP
+server</em> delivery option caters for both.  Here is an example of each
+type:</p></div>
+<div class="sect3">
+<h4 id="_example_smartphone_sms_gateway">Example smartphone SMS Gateway</h4>
+<div class="paragraph"><p>This
+<a href="https://play.google.com/store/apps/details?id=eu.apksoft.android.smsgateway">SMS
+Gateway app</a> installs a personal SMS gateway server on your Android
+phone. The PRS sends SMS messages to your phone over the Wireless
+network, your phone then delivers the SMS message just as if you had
+entered it manually.</p></div>
+<div class="paragraph"><p>After you have installed and configured the SMS Gateway app on your
+phone enter these <em>SMS HTTP server</em> parameters from the PRS
+<em>Tools&#8594;Setup&#8594;SMS Texting and Phone Calls</em> menu command:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+HTTP send URL
+</dt>
+<dd>
+<div class="literalblock">
+<div class="content">
+<pre><code>http://{address}:9090/sendsms?phone={to}&amp;text={text}</code></pre>
+</div></div>
+</dd>
+<dt class="hdlist1">
+Server address
+</dt>
+<dd>
+<p>
+The <em>Server address</em> is set to the IP address of your phone. You can
+find the IP address of your Android phone by going <em>Settings&#8594;WiFi</em>
+and then selecting <em>Advanced</em> from the menu (this is not available in
+older versions of Android, look instead in the SMS Gateway app&#8217;s HTTP
+settings).
+</p>
+</dd>
+<dt class="hdlist1">
+HTTP request method
+</dt>
+<dd>
+<p>
+<code>GET</code>
+</p>
+</dd>
+</dl></div>
+</div>
+<div class="sect3">
+<h4 id="_example_cloud_based_sms_gateway">Example Cloud-based SMS Gateway</h4>
+<div class="paragraph"><p><a href="http://www.clickatell.com/">Clickatell&#8217;s</a> Cloud-based HTTP SMS Gateway
+API accepts HTTP requests to send SMS messages.  You need a
+Clickatell API account.</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+HTTP send URL
+</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="literalblock">
+<div class="content">
+<pre><code>https://api.clickatell.com/http/sendmsg?api_id=xxxx&amp;user=xxxx&amp;password=xxxx&amp;to={to}&amp;text={text}</code></pre>
+</div></div>
+<div class="paragraph"><p>Change the <em>xxxx</em> values to your Clickatell account API ID, user name
+and password.</p></div>
+</div></div>
+</dd>
+<dt class="hdlist1">
+Server address
+</dt>
+<dd>
+<p>
+Two choices:
+</p>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Leave it blank and set the site-wide <em>Send SMS messages using</em>
+  setting to <em>HTTP server</em>, this applies the HTTP Server delivery
+  method to all users.
+</p>
+</li>
+<li>
+<p>
+Or enter a dummy non-blank value to apply the HTTP Server delivery
+  method to this user (irrespective of the site-wide <em>Send SMS messages
+  using</em> setting).
+</p>
+</li>
+</ol></div>
+</div></div>
+</dd>
+<dt class="hdlist1">
+HTTP request method
+</dt>
+<dd>
+<p>
+<code>GET</code>
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>This example is for illustrative purposes&#32;&#8212;&#32;you would be better off
+using the PRS&#8217;s dedicated Clickatell delivery option as it has message
+tracking features.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips_and_tricks">Tips and Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_text_too_small">Text too small?</h3>
+<div class="paragraph"><p>High resolution displays on laptops can render the text too small to
+be read comfortably. Here are some techniques to increase the screen
+text size:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The PRS has an option that allows you to bump the font size in PRS
+  text boxes up to 10pt, see our
+  <a href="http://prshq.com/newsletters/newsletter_mar_2013.html">March
+  newsletter</a> for details.
+</p>
+</li>
+<li>
+<p>
+If you are running Windows 7 or Windows 8 you can bump up text size
+  for all applications:
+</p>
+<div class="openblock">
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="text-resize.png" alt="text-resize.png" />
+</div>
+</div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Open the Windows <em>Control Panel</em>.
+</p>
+</li>
+<li>
+<p>
+Search for <em>text display</em>.
+</p>
+</li>
+<li>
+<p>
+Click on <em>Make text and other items larger or smaller</em> and adjust
+  the text size.
+</p>
+</li>
+</ol></div>
+</div></div>
+</li>
+<li>
+<p>
+If you are running Windows XP you could try decreasing the display
+  resolution to resize the whole screen:
+</p>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Right-click on the Desktop and select the <em>Properties</em> menu item.
+</p>
+</li>
+<li>
+<p>
+Click the <em>Settings</em> tab.
+</p>
+</li>
+<li>
+<p>
+Adjust the <em>Screen resolution</em>.
+</p>
+</li>
+</ol></div>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_contingency_planning_with_offline_access">Contingency planning with Offline Access</h3>
+<div class="paragraph"><p>The <a href="http://prshq.com/prs_user_guides/offlineaccess2.htm">PRS Offline
+Access feature</a> allows PRS Client PCs to use a local copy of the
+shared database when they are not connected to the network. This is
+normally used to allow laptops to access PRS data when they are taken
+out of the office but it can also be used as a contingency backup for
+desktop PCs in the event of an office server or network outage&#32;&#8212;&#32;users will be able to access the local offline data until the outage
+is fixed.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_need_help">Need help?</h3>
+<div class="paragraph"><p>Our <a href="http://prshq.com/support.html">Support</a> web page
+explains how to get answers to PRS questions and includes links to
+articles on <a href="http://prshq.com/maintenance.html">Maintaining
+Database Reliability and Performance</a> and
+<a href="http://prshq.com/best_practice_deployment.html">PRS Best
+Practice Deployment</a>.</p></div>
+<div class="paragraph"><p>For a full list of the changes since
+the previous release see the <a href="http://prshq.com/changelog.html">PRS
+Changelog</a> web page.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you no longer wish to receive this newsletter please
+email <a href="mailto:support@prshq.com">support@prshq.com</a> with the word <em>UNSUBSCRIBE</em> in
+the subject line.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>
