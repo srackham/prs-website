@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Not Found</h2>
+    <p>The requested URL
+    <code><!--#echo var="REQUEST_URI" --></code>
+    was not found
+    (error <!--#echo var="REDIRECT_STATUS" -->).</p>
+    <hr>
+  </body>
+</html>

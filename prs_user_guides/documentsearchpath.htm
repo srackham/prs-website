@@ -1,0 +1,183 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Configuration Options &gt; File Locations &gt; Document Search Path</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Document Search Path">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?documentsearchpath.htm"; }
+  else { parent.quicksync('a3.8.2.4'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide &gt; <a href="configurationoptions.htm">Configuration Options</a> &gt; <a href="filelocations.htm">File Locations</a>&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">Document Search Path</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="exportfolder.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="filelocations.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="indexed_documents_folder.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>The PRS manages linked documents by recording the full document path name. If previously linked documents are moved to a different location, or are accessed through network path names that differ from one PRS client to the next (see also <a href="documentsfolder.htm">Documents Folder</a>), then PRS clients will be unable to find and open the documents from their originally linked locations.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The PRS <span style="font-weight: bold;">Document Search Path</span> option allows the PRS to automatically cope with these situations.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The <span style="font-weight: bold;">Document Search Path</span> is a semi-colon-separated list of folders and folder mappings that are searched whenever a document cannot be found at it's linked location. List entries are processed left to right.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Entries in the list can be one of two forms:</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td><td>A single folder name, in which case the folder (but not it's subfolders) is searched for missing documents.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2.</td><td>A folder mapping consisting of two folder names separated by an <span style="font-weight: bold;">=</span> character. In this case the first folder is mapped to the second when performing the search. In other words, the left hand (old location) folder is replaced by right-handed (new location) folder in linked paths.</td></tr></table></div><p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Folder mapping examples:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_TableHeading">Problem</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableHeading">Solution</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_TableBody">Linked documents in P:\PUB and it's subfolders have been moved to J:\ and can no longer be found.</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Add the folder mapping P:\PUB=J:\ to the Document Search Path. For example file P:\PUB\DOCS\MYFILE.DOC would be translated to J:\DOCS\MYFILE.DOC. This form is most useful when entire folder trees are relocated.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_TableBody">A PRS client PC stores linked documents locally in C:\PUBLIC\DOCS which is seen at location P:\DOCS from other PRS client PCs. Documents linked at the first PC cannot be seen on other PCs.</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Add the following cross mapping in the PRS Document Search Path: C:\PUBLIC\=P:\;P:\=C:\PUBLIC\. This will translate document links saved from the first PC to the equivalent location seen by the other PCs (and vice versa).</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>

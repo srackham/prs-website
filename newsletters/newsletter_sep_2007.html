@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="./newsletter.css" type="text/css" />
+<title>PRS Newsletter</title>
+</head>
+<body style="max-width:50em;">
+<table><tbody><tr>
+<td>&nbsp;</td>
+<td>
+<div id="header">
+<table>
+  <tbody>
+    <tr>
+      <td class="logo">
+        <img src="./logo.jpg" alt="logo" />
+      </td>
+      <td class="title">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;"> PRS News &amp; Tips</span>
+      </td>
+      <td class="date">
+        <span style="font-family:'Times New Roman',serif; color:#666699; font-weight: bold;">September 2007</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="sect1">
+<h2 id="_latest_news">Latest News</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_version_7_0_5_has_a_brand_new_document_indexer">Version 7.0.5 has a brand new document indexer</h3>
+<div class="paragraph"><p>We&#8217;ve just released PRS client version 7.0.5. The big news is that
+we&#8217;ve completely rewritten the PRS <em>Document Search Tool&#8217;s</em> full-text
+search engine (<a href="http://www.methods.co.nz/docindexer/">DocIndexer</a>)&#32;&#8212;&#32;incremental indexing is now supported and the query language has been
+greatly expanded. Updating your document indexes is between 25 and 100
+times faster, searching is twice as fast. Here&#8217;s
+<a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">a summary of
+the expanded query syntax</a>. We&#8217;ve also added a <em>File name</em> option to
+the Document Search Tool <em>Match</em> drop-down&#32;&#8212;&#32;you can now search for
+words in a file name.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">The new document index files are incompatible with previous
+versions&#32;&#8212;&#32;<strong>all users of the PRS <em>Document Search Tool</em> must be
+upgraded to the 7.0.5 client</strong>.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>See the <a href="http://www.methods.co.nz/prs/changelog.html">changelog</a> for a
+full list of the changes since the last release ( in case you missed
+it, since 7.0.4 last month we released the 7.0.4a interim release).</p></div>
+<div class="paragraph"><p>To download and upgrade to PRS 7.0.5 go to the
+<a href="http://www.methods.co.nz/prs/updates.html#X1">Installing the Latest PRS
+Client</a> section on our Updates webpage page and follow the
+instructions.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">If you&#8217;re still on version 6 take a look at our
+<a href="http://www.methods.co.nz/prs/prs7-migration.html">PRS6 to PRS7
+Migration</a> guide before upgrading.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips_and_tricks">Tips and Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_report_titles">Report titles</h3>
+<div class="paragraph"><p>When printing a report don&#8217;t forget you can personalise the title by
+entering your own title in the <em>Custom report title</em> text box of the
+report dialog.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_top_notes">Top notes</h3>
+<div class="paragraph"><p>If you have important information you want displayed prominently at
+the top of the Personnel, Sites, Vacancies or Invoice notes list then
+tick the <em>Top note</em> checkbox when you create the note.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_cc_8217_ing_a_personnel_note_to_a_site">CC&#8217;ing a personnel note to a site</h3>
+<div class="paragraph"><p>If you&#8217;re making a personnel note which is also relevant to the
+person&#8217;s site then ticking the <em>Copy note to site</em> checkbox will make
+a copy of the note to the person&#8217;s site record. <strong>NOTE:</strong> This option
+will only be visible if the person has been assigned a related site.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_checking_available_sms_credits">Checking available SMS credits</h3>
+<div class="paragraph"><p>You can check your texting credits by dropping down the PRS <em>Tools</em>
+menu, going to <em>Setup&#8594;SMS Messaging</em> and then clicking the <em>Query
+Clickatell SMS account balance</em> link.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_remove_obsolete_prs6_notes">Remove obsolete PRS6 notes</h3>
+<div class="paragraph"><p>If you&#8217;ve previously upgraded from PRS6 to PRS7 you should delete the
+old PRS version 6 notes&#32;&#8212;&#32;they take up considerable space and are no
+longer used. Because the deletion is resource intensive do it when
+no other users are logged in and follow it with a database compaction.
+Here&#8217;s how:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Ask all other users to close the PRS.
+</p>
+</li>
+<li>
+<p>
+Drop down the PRS <em>Tools</em> menu and select <em>Notes</em>.
+</p>
+</li>
+<li>
+<p>
+Press the Notes Tool <em>Options&#8230;</em> button.
+</p>
+</li>
+<li>
+<p>
+Press the <em>Delete Obsolete PRS6 Notes&#8230;</em> button in the Notes Tool
+  Options dialog (if you can&#8217;t see the button then there were no PRS6
+  notes or they have already been deleted).
+</p>
+</li>
+<li>
+<p>
+Click the <em>Yes</em> button.
+</p>
+</li>
+<li>
+<p>
+Once the operation is complete close the PRS and
+  <a href="http://www.methods.co.nz/prs/maintenance.html#X6">compact the
+  database</a>.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_need_help">Need help?</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Our <a href="http://www.methods.co.nz/prs/support.html">Support</a> web page
+  explains how to get answers to PRS questions and includes links to
+  articles on
+  <a href="http://www.methods.co.nz/prs/maintenance.html">Maintaining Database
+  Reliability and Performance</a> and
+  <a href="http://www.methods.co.nz/prs/best_practice_deployment.html">PRS Best
+  Practice Deployment</a>.
+</p>
+</li>
+<li>
+<p>
+Don&#8217;t forget to check out our
+  <a href="http://www.methods.co.nz/prs/videos.html">PRS Training Videos</a>.
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">If you no longer wish to receive this newsletter please
+email <a href="mailto:support@methods.co.nz">support@methods.co.nz</a> with the word <em>UNSUBSCRIBE</em> in
+the subject line.</td>
+</tr></table>
+</div>
+</div>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr></tbody></table>
+
+</body>
+</html>

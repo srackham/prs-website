@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+<title>PRS Best Practice Deployment</title>
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<h1>PRS Best Practice Deployment</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>This document explains how to deploy the PRS software in a multi-user
+environment.  Most of the information presented here can be found in
+greater detail in the <em>PRS Administration Guide</em>. You can find the
+<em>Prerequisites</em> and <em>Installation Procedures</em> sections of the <em>PRS
+Administration Guide</em> in the PRS on-line help (Select <em>PRS Help</em> from
+the PRS <em>Help</em> menu) or on the Web at
+<a href="http://prshq.com/documentation.html">http://prshq.com/documentation.html</a>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment_overview">Deployment Overview</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The PRS Personnel Recruitment System is a multi-user database
+application:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+A single copy of the shared database files reside on a file server.
+</p>
+</li>
+<li>
+<p>
+Users access the database using the PRS Client application which is
+  installed on each user PC.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Deployment consists of first installing a blank copy of the <em>PRS
+Shared Data Files</em> on the server and then a copy of the <em>PRS Client</em>
+on each user PC.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Before you start make sure you have the PRS CD-ROM and a copy of your
+PRS license activation file (the licence activation file will have
+been emailed to the nominated PRS administrator at the time of
+purchase).</p></div>
+<div class="paragraph"><p>If you don&#8217;t have a CD-ROM you can download the
+<a href="http://prshq.com/runtime.html">PRS Runtime</a> and
+<a href="http://prshq.com/updates.html">PRS Client, Demo and Shared Data</a>
+install wizards.</p></div>
+<div class="paragraph"><p>The PRS hardware and software requirements are relatively minimal and
+include a file server using Microsoft file serving protocols and
+client PCs running Microsoft Windows 7, Windows 8 or Windows 10.
+Connections from client PCs to the server should be via a 10Mbps or
+better local area network.</p></div>
+<div class="paragraph"><p>The hardware and software requirements for the server, client PCs and
+the network are spelt out in detail in the <em>Prerequisites</em> section of
+the <em>PRS Administration Guide</em>.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploying_the_prs_shared_database">Deploying the PRS Shared Database</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Before running the PRS shared data files installer you should decide
+on a writable location on the server for the PRS shared data. The
+location should be mapped to the same network drive letter on all
+client PCs.</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Insert the PRS CD-ROM in a PC with access to the shared mapped
+  network drive and wait for the <em>PRS Setup</em> menu to appear, then
+  click the <em>Install Shared PRS Data Files</em> button.
+</p>
+<div class="paragraph"><p><strong>Or</strong>, if you don&#8217;t have the PRS CD-ROM,  download the
+<a href="prs2k_data_setup_806.exe">Shared Database Install
+wizard</a> then run the PRS 8.0.6 <em>Shared Database Install Wizard</em>
+by double-clicking the previously downloaded
+<em>prs2k_data_setup_806.exe</em> Shared Data Install Wizard.</p></div>
+</li>
+<li>
+<p>
+Run through the setup wizard until you reach the <em>Select Destination
+  Location</em> page, at this point:
+</p>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Press the <em>Browse&#8230;</em> button.
+</p>
+</li>
+<li>
+<p>
+Select the destination mapped drive and press <em>OK</em>.  For example,
+     if your common mapped drive is <code>P:</code> then install the <em>Destination
+     Location</em> will be <code>P:\prs2k_data</code>.
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Press <em>Next</em> and finalise the install wizard.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>The PRS also manages your shared recruitment related documents, these
+need to be moved to the PRS shared <em>Documents</em> folder which has
+already been created inside the <em>Shared Data folder</em> by the shared
+data installer.  See <em>Managing Documents and Document Search Indexes</em>
+below.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Earlier versions of the <em>PRS Administration Guide</em> incorrectly
+  recommend using UNC path names rather than Drive path names.
+</p>
+</li>
+<li>
+<p>
+You should also ensure the shared data files location is included in
+  your back regime (see <em>Backups</em> below).
+</p>
+</li>
+<li>
+<p>
+Use the same mapping on all PRS client PCs&#8201;&#8212;&#8201;if you don&#8217;t documents
+  linked from one PC won&#8217;t be found from other PCs.
+</p>
+</li>
+<li>
+<p>
+If your server doubles as a the PRS Client you should map the shared
+  data folder on the server to the same network drive as on the other
+  user workstations and configure the server&#8217;s PRS Client to use the
+  mapped network drive for shared data locations (not its local hard
+  disk drive).
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploying_prs_clients">Deploying PRS Clients</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>You need to install the PRS Client application on each PC that uses
+the PRS.</p></div>
+<div class="paragraph"><p>The PRS integrates with Microsoft Word and Outlook so they should be
+installed before installing the PRS (the PRS works without these
+programs but you lose some functionality).</p></div>
+<div class="paragraph"><p>Although not a requirement, we recommend installing the
+<a href="demo.html">PRS Demo Version</a> on all client PCs. This will:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Verify the PRS is installs and runs on the client PC.
+</p>
+</li>
+<li>
+<p>
+Serve as a useful user sandbox for learning the PRS.
+</p>
+</li>
+</ol></div>
+<div class="sect2">
+<h3 id="_install_the_prs_demo_and_prs_client">Install the PRS Demo and PRS Client</h3>
+<div class="olist arabic"><div class="title">From the Internet</div><ol class="arabic">
+<li>
+<p>
+Install the <a href="runtime.html#X2">PRS Runtime</a>.
+</p>
+</li>
+<li>
+<p>
+Download the <a href="prs2k_demo_setup_822.exe">PRS Demo Setup
+  Wizard</a>.
+</p>
+</li>
+<li>
+<p>
+Run the downloaded <code>prs2k_demo_setup_822</code> Setup Wizard and
+  follow the on-screen instructions.
+</p>
+</li>
+<li>
+<p>
+Download the <a href="prs2k_client_setup_822.exe">PRS Client Setup
+  Wizard</a>.
+</p>
+</li>
+<li>
+<p>
+Run the downloaded <code>prs2k_client_setup_822</code> Setup Wizard and
+  follow the on-screen instructions.
+</p>
+</li>
+</ol></div>
+<div class="olist arabic"><div class="title">From CD-ROM</div><ol class="arabic">
+<li>
+<p>
+Insert PRS CD-ROM and wait for the <em>PRS Setup</em> menu to appear.
+</p>
+</li>
+<li>
+<p>
+Install the <em>PRS Demo Version</em>&#8201;&#8212;&#8201;if this is the first PRS install
+  on the PC you will be prompted to install the PRS Runtime. Once the
+  runtime has installed you&#8217;ll need to go back and repeat this step.
+</p>
+</li>
+<li>
+<p>
+Start and login to the Demo Version (double-click the <em>PRS 2000
+  Demonstration</em> desktop icon) to check it is functioning.
+</p>
+</li>
+<li>
+<p>
+Click the <em>Install a PRS Client</em> button on the <em>PRS Setup</em> menu and
+  run through the setup wizard (accept the default options unless you
+  know exactly what you&#8217;re doing).
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_configure_prs_client">Configure PRS client</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">The default PRS administrator or supervisor passwords are set
+to a blank value.</td>
+</tr></table>
+</div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Start the PRS Client (double-click the <em>PRS 2000</em> desktop icon).
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+If this is the first time the PRS Client has been installed on
+    this PC you will be prompted for the location of the shared PRS
+    database folder.
+</p>
+</li>
+<li>
+<p>
+If this is the first client to login to the shared PRS database
+    you will be prompted for the PRS license activation file (the
+    licence activation file will have been emailed to the nominated
+    PRS administrator at the time of purchase).
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+If this is the first client to login to the shared PRS database you
+  should set
+  the PRS Supervisor and Administrator passwords&#8201;&#8212;&#8201;run the PRS
+  <em>Tools&#8594;Options</em> menu command; select the <em>Security</em> tab; press the
+  <em>Set Admin Password</em> and <em>Set Super Password</em> buttons.
+</p>
+</li>
+<li>
+<p>
+Run the PRS <em>Tools&#8594;Options</em> menu command; select the <em>File
+  Locations</em> tab and ensure the <em>Link to documents folder</em> and <em>Site
+  wide documents folder</em> check-boxes are checked.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_managing_documents_and_document_search_indexes">Managing Documents and Document Search Indexes</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Recruitment related documents can be linked to PRS data records.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+The documents themselves are stored in the shared <em>Documents</em> folder
+  (located inside the PRS shared data folder)&#8201;&#8212;&#8201;they are not embedded
+  in the database.
+</p>
+</li>
+<li>
+<p>
+If you have an existing set of shared documents move them to the
+  shared <em>Documents</em> folder.
+</p>
+</li>
+<li>
+<p>
+By default the PRS enforces document linking to the shared Documents
+  Folder.  To this end you will have ensured the <em>Link to documents
+  folder</em> and <em>Site wide documents folder</em> check-boxes were checked
+  when you installed the PRS Clients.
+</p>
+</li>
+<li>
+<p>
+If you plan to use the PRS <em>Document Search Tool</em> (a full text
+  search engine) you need to index the shared <em>Documents</em> folder. You
+  can do this manually using the PRS <em>Tools&#8594;Setup&#8594;Document Search
+  Index</em> menu command although it is recommended that you schedule
+  this to happen automatically on the server (see the <em>PRS Admin
+  Guide</em> for instructions).
+</p>
+</li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+The document indexer can take some time to complete, depending on
+  the number of documents.
+</p>
+</li>
+<li>
+<p>
+Do not index a UNC path name&#8201;&#8212;&#8201;the Document Indexer only processes
+  Drive path names (the use of Drive path names is covered in the
+  <em>Deploying the PRS Shared Database</em> section).
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_system_maintenance">System Maintenance</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>PRSMon</em> (the PRS Database Administration program) is your friend,
+read about it in the <em>PRSMon Administration Program</em> section of the
+<em>PRS Administration Guide</em>.</p></div>
+<div class="paragraph"><p>The <a href="http://prshq.com/maintenance.html">Maintaining Database
+Reliability and Performance</a> page on the PRS Website has a PRS
+maintenance check list.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_backups">Backups</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Backup the PRS Shared Database folder daily&#8201;&#8212;&#8201;see the <em>Backup up
+  the PRS</em> section of the PRS Admin Guide.
+</p>
+</li>
+<li>
+<p>
+Do backup fire-drills to check your backups actually work.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_operational_guidelines">Operational Guidelines</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Do decide on a security policy (what users can do what) and then set
+  the PRS Security Options appropriately (run the PRS
+  <em>Tools&#8594;Options&#8230;</em> menu command and click on the <em>Security</em> tab).
+</p>
+</li>
+<li>
+<p>
+Do decide on a minimal, appropriate sets of Personnel Skills,
+  Occupations, Locations and Industries before populating the database
+  (see the PRS <em>Tools&#8594;Setup</em> menu).
+</p>
+</li>
+<li>
+<p>
+Discourage users from manually renaming, moving or deleting
+  documents in the shared Documents Folder&#8201;&#8212;&#8201;if they do then
+  documents linked to the PRS won&#8217;t be found and you&#8217;ll have to relink
+  them.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:38:31 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

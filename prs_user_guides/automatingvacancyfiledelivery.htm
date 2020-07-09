@@ -1,0 +1,161 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Exporting PRS Data &gt; Exporting Vacancy Files &gt; Automating Vacancy File Delivery</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Automating Vacancy File Delivery">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?automatingvacancyfiledelivery.htm"; }
+  else { parent.quicksync('a3.12.2.2'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide &gt; <a href="exportingprsdata.htm">Exporting PRS Data</a> &gt; <a href="exportingvacancyfiles.htm">Exporting Vacancy Files</a>&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">Automating Vacancy File Delivery</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="vacancyfileformats.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="exportingvacancyfiles.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="enablingadditionalvacancyfi.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>After exporting Web pages and vacancy files you would normally upload them to your Web site or send them to your vacancies publisher. Normally Email or FTP is used — your website hoster will provide the necessary information to set up file delivery. Typically you would write a script to deliver the files and either:</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td><td>Have the PRS run the file delivery script automatically following vacancy publication.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2.</td><td>Or schedule a script to run at some fixed daily interval.</td></tr></table></div><p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Set the <span style="font-weight: bold;">Run this command after publishing</span> vacancy publication option to run an external program automatically after PRS vacancy publication (drop down the PRS <span style="font-weight: bold;">Tools</span> menu, open the <span style="font-weight: bold;">Vacancy Publication Tool</span>, and press the <span style="font-weight: bold;">Publication Options...</span> button).</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The PRS also assists the scheduled delivery of vacancy files by creating a file named <span style="font-size: 10pt; font-family: 'Courier New';">_publish_</span> in the same directory as the published vacancy files. This single line text file contains the date the publication took place and signals, to an external delivery program, that vacancy publication has occurred. If you use this mechanism then you should rename the file to <span style="font-size: 10pt; font-family: 'Courier New';">_publish_done</span> after successful vacancy files delivery.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The format of the publication date in the <span style="font-size: 10pt; font-family: 'Courier New';">_publish_</span> file is: <span style="font-size: 10pt; font-family: 'Courier New';">ddd mmmm dd hh:mm:ss yyyy</span></p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>For example: <span style="font-size: 10pt; font-family: 'Courier New';">Wed May 31 11:46:32 2000</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>

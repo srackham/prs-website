@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+<title>Upgrading PRS Shared Data</title>
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<h1>Upgrading PRS Shared Data</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Occasionally new features become available that require a PRS Shared
+Data upgrade, but it&#8217;s not something that you will normally need to do.</p></div>
+<div class="paragraph"><p>Version 8.0.6 is the latest version of the PRS shared data (you
+can check which <em>shared data</em> version you are on with the <em>Help&#8594;About
+PRS</em> menu command). The <a href="changelog.html">PRS Changelog</a> will tell
+you which features require a shared data upgrade.</p></div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Upgrading from Version 7 of the shared data</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Please read the <a href="version8.html#prs8_upgrade">PRS 8 upgrade FAQ</a>
+  before proceeding.
+</p>
+</li>
+<li>
+<p>
+All PRS Clients need to be upgraded to version 8 <strong>prior</strong> to
+  upgrading the shared database to version 8.
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instructions">Instructions</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Download the <a href="prs2k_data_setup_806.exe">Shared
+  Database Install wizard</a>.
+</p>
+</li>
+<li>
+<p>
+Run the PRS 8.0.6 <em>Shared Database Install Wizard</em> by
+  double-clicking the previously downloaded
+  <em>prs2k_data_setup_806.exe</em> Shared Data Install Wizard.
+</p>
+</li>
+<li>
+<p>
+Ask all users to close all open copies of the PRS Desktop Client.
+</p>
+</li>
+<li>
+<p>
+Open the <em>PRS Monitor</em> program&#8201;&#8212;&#8201;you will find it in the <em>Programs</em>
+  section of the <em>Windows Start Menu</em> under <em>PRS 2000</em> (it&#8217;s called
+  <em>PRS Monitor</em> and has a binoculars icon).
+</p>
+</li>
+<li>
+<p>
+The command choosen here depends on which shared data version you
+  are currently running:
+</p>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+Coming from shared data version 8
+</dt>
+<dd>
+<p>
+  Execute the PRS Monitor <em>Tools&#8594;Rebuild Database</em> command.
+</p>
+</dd>
+<dt class="hdlist1">
+Coming from shared data version 7
+</dt>
+<dd>
+<p>
+  Execute the PRS Monitor <em>Tools&#8594;Upgrade Database</em> command.
+</p>
+</dd>
+</dl></div>
+</li>
+<li>
+<p>
+Eenter 8.0.6 when prompted for an upgrade version number.
+</p>
+</li>
+<li>
+<p>
+The upgrade will now proceed silently and may take a while, please
+  wait for the <em>Upgrade/Rebuild has successfully completed</em> prompt
+  before doing anything else.
+</p>
+</li>
+</ol></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+It&#8217;s easier if you work from a machine that already has the PRS
+  installed, this way the <em>Shared Database Install Wizard</em> will be
+  able to figure out where the current shared PRS database resides.
+</p>
+</li>
+<li>
+<p>
+The PRS Shared Database Install procedure <strong>should only be run once</strong>
+ &#8201;&#8212;&#8201;you don&#8217;t need to run it from every PC that uses the PRS.
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:39:29 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

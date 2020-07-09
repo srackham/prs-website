@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Internal Server Error</h2>
+    <p>The requested URL
+    <code><!--#echo var="REQUEST_URI" --></code>
+    generated a server error
+    (error <!--#echo var="REDIRECT_STATUS" -->).</p>
+    <hr>
+  </body>
+</html>

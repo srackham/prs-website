@@ -1,0 +1,263 @@
+/* Mostly to override standard xhtml11.css */
+
+body {
+  margin: 1em 5% 1em 2%;
+  font-family: sans-serif;
+}
+
+#header {
+  color: #666699;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#header table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#header td {
+  border-top: 3px solid #dcdcdc;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+#header td.logo {
+  width: 60px;
+}
+
+#header td.logo img {
+  vertical-align: middle;
+}
+
+#header td.title {
+  font-size: 32pt;
+}
+
+#header td.date {
+  font-size: 18pt;
+  text-align: right;
+}
+
+p, ul, ol {
+  margin-top: 0.2em;
+  margin-bottom: 1.0em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+
+.dlist dd {
+  margin-bottom: 0.8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #666699;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-style: oblique;
+}
+h2 {
+  font-size: 20pt;
+  border-bottom: 3px solid #dcdcdc;
+}
+h3 {
+  font-size: 14pt;
+  text-decoration: underline;
+}
+
+em, .dlist dt {
+/*
+  font-weight: bold;
+*/
+  color: #666699;
+}
+
+div.imageblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+div.listingblock pre {
+  background: #f4f4f4;
+  color: navy;
+  padding: 0.5em;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+div.sidebar-content {
+/*Because OL only applies background to text (not block)
+  background: #ffffee;
+ */
+  border: 2px solid silver;
+  padding: 0.5em;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+div.sidebar-title, div.image-title, div.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #666699;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 5px;
+}
+td.hlist1 {
+  vertical-align: top;
+  padding-right: 0.8em;
+  color: #666699;
+  font-weight: bold;
+  font-style: oblique;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+/*
+Results in MHTML rendering problems:
+div.admonitionblock {
+*/
+div.admonitionblock table {
+  border: 2px solid silver;
+  background: #ffffee;
+  margin-bottom: 10px;
+  width: 100%;
+}
+div.admonitionblock td.icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #666699;
+  text-decoration: underline;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.icon div.title {
+  margin-top: 0;
+  padding-left: 0.2em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+}
+
+/*
+div.tableblock table, div.hlist table {
+  border: 2px solid #fa0;
+  margin: 0.5em 5% 1em 14px;
+  background: #ffffee;
+}
+*/
+/* Block element titles. */
+div.title, caption.title {
+  color: #666699;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+table.tableblock th {
+  font-family: sans-serif;
+}
+
+p.table, li p, dd p {
+  margin: 0.1em 0 0.3em 0;
+}
+
+li img {
+  margin-top: 8px;
+}
+
+div.tableblock {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+span.smallnew {
+  color: navy;
+  font-size: 0.75em;
+  font-family: Arial,sans-serif;
+}
+
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+

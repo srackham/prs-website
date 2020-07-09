@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<div class="sect1">
+<h2 id="_prs6_to_prs7_migration">PRS6 to PRS7 Migration</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph"><p><em>It is recommended that this migration be carried out by someone
+familiar with software installation and PC administration. If you have
+any questions about the upgrade or require support prior to or during
+the upgrade please <a href="contact.html">give us a call</a>.</em></p></div>
+</div></div>
+<div class="paragraph"><p>The migration from PRS6 to PRS7 requires a shared database upgrade as
+well as installing the new PRS7 client on all PCs.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<div class="ulist"><ul>
+<li>
+<p>
+Please read the rest of this document before upgrading.
+</p>
+</li>
+<li>
+<p>
+This migration requires all client PCs to be upgraded&#8201;&#8212;&#8201;you can&#8217;t
+  have a mix of PRS6 and PRS7 clients.
+</p>
+</li>
+<li>
+<p>
+The upgrade requires all other users to be logged out of the PRS so
+  it&#8217;s a good idea to do the upgrade outside normal business hours.
+</p>
+</li>
+<li>
+<p>
+Notes that have been entered directly into the Notes field i.e.
+  without valid user/date stamps will be migrated using the default
+  date and user (see <em>Notes Migration</em> below).
+</p>
+</li>
+</ul></div>
+</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Here&#8217;s the procedure:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Download the PR7 Shared Database and Client Install wizards from
+  <a href="../OLD/prs2k_data_setup_705.exe">prs2k_data_setup_705.exe</a> and
+  <a href="../OLD/prs2k_client_setup_712.exe">prs2k_client_setup_712.exe</a> respectively.
+</p>
+</li>
+<li>
+<p>
+Make sure the PRS is closed on all PCs.
+</p>
+</li>
+<li>
+<p>
+Run the PRS 705 <em>Shared Database Install Wizard</em> by
+  double-clicking the previously downloaded
+  <em>prs2k_data_setup_705.exe</em>
+  Shared Data Install Wizard.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Work from a machine that already has the PRS installed, this way
+    the <em>Shared Database Install Wizard</em> will be able to figure out
+    where the current shared PRS database resides.
+</p>
+</li>
+<li>
+<p>
+The PRS <em>Shared Database Install Wizard</em> should only be run once
+   &#8201;&#8212;&#8201;you don&#8217;t need to run it from every PC that uses the PRS.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Open the PRS Monitor program from the Windows Start Menu:
+  <em>Start&#8594;Programs&#8594;PRS 2000&#8594;PRS Monitor</em>.
+</p>
+</li>
+<li>
+<p>
+Run the PRS Monitor <em>Tools&#8594;Upgrade Database&#8230;</em> menu command:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Enter 705 when prompted for the upgrade version
+    number.
+</p>
+</li>
+<li>
+<p>
+You will next be prompted to compact and backup the database, you
+    probably want to answer <em>Yes</em> and wait for it to complete.
+</p>
+</li>
+<li>
+<p>
+You will next be prompted to perform the upgrade, answer <em>OK</em>.
+</p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">This will take a few minutes, it notifies you when it&#8217;s
+finished.</td>
+</tr></table>
+</div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Install the PRS Client by double-clicking the previously downloaded
+  <em>prs2k_client_setup_712.exe</em> Client Setup Wizard.
+</p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">Client installation needs to be done from an administrative
+account&#8201;&#8212;&#8201;the installer will warn you if you are not logged on to and
+administrative account.</td>
+</tr></table>
+</div>
+</li>
+<li>
+<p>
+Once your machine has rebooted following the PRS Client install open
+  the newly installed client and follow the on-screen instructions to
+  perform the Notes migration.
+</p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">The time taken to perform the migration depends on the number of
+notes you have and the performance of you Local Area Network. Most
+installations have less than one hundred thousand notes and and should
+take less than an hour.</td>
+</tr></table>
+</div>
+</li>
+<li>
+<p>
+A message will pop up once the migration has completed, you should
+  now upgrade the remaining PCs with the PRS Client Install Wizard
+  (repeat step 6 on each PC).
+</p>
+</li>
+</ol></div>
+<div class="sect2">
+<h3 id="_notes_migration">Notes Migration</h3>
+<div class="paragraph"><p>The Note Migration code analyses the user/date timestamps in the
+existing notes field and writes each note as a new notes record.</p></div>
+<div class="paragraph"><p>If the format of the user/date timestamps have been manually changed
+the timestamp won&#8217;t be recognised and the note will either be included
+in the previous note record or, if it is the only note in the notes
+field, placed in a notes record dated 1/1/1970 with the creator set to
+the currently logged on user.</p></div>
+<div class="paragraph"><p>If the user initials in the migrated note does not belong to one of
+the current consultants then the note creator is set to the currently
+logged on user.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">If you want to view the contents of the old PRS6 notes field hold
+down <em>Ctrl+Shift+Alt</em> and click anywhere in the notes list on the
+Personnel, Sites, Vacancies or Invoices forms.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Once the migration has been successfully completed the <em>prs7migration</em>
+entry in the <em>[Main]</em> section of the <em>prs_data.ini</em> file is set to
+<em>True</em>, do not delete or change this entry unless you wish to perform
+the migration again.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_reverting_the_migration">Reverting the Migration</h3>
+<div class="paragraph"><p>It is possible to roll back the migration to the PRS version 6 data
+just prior to the PRS7 migration, here&#8217;s how:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Log all users out of the PRS.
+</p>
+</li>
+<li>
+<p>
+Reinstall the <a href="../OLD/prs2k_client_setup_609.exe">PRS 6.0.9 client</a> on
+  PCs that currently have the PRS7 client installed.
+</p>
+</li>
+<li>
+<p>
+Rename or move the current <em>prs_data.mdb</em> database in the <em>Shared
+  Data folder</em> (if you don&#8217;t know where the Shared Data folder is open
+  the PRS Monitor (Windows <em>Start menu&#8594;Programs&#8594;PRS2000&#8594;PRS
+  Monitor</em>) and read the bottom status line).
+</p>
+</li>
+<li>
+<p>
+Copy the <em>prs_data_upgraded_to_705.mdb</em> file to
+  <em>prs_data.mdb</em> (the <em>prs_data_upgraded_to_705.mdb</em>
+  file is a copy of your PRS6 shared database created by the PRSMon
+  just prior to the original PRS7 database upgrade).
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:38:54 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

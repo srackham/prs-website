@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="cache-control" content="max-age=172800" />
+<meta name="author" content="Stuart Rackham" />
+<meta name="author-email" content="srackham@methods.co.nz" />
+<link rel="stylesheet" href="prs.css" type="text/css" />
+</head>
+<body style="max-width:55em;">
+<div id="header">
+        <img src="images/header.gif" alt="Header" />
+</div>
+<div id="menu">
+<a href="index.html">Home</a>
+<a href="features.html">Features</a>
+<a href="evaluation.html">Try it Out</a>
+<a href="documentation.html">Documentation</a>
+<a href="pricing.html">Pricing</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact Us</a>
+<a href="search.html">Search</a>
+<a href="support.html">Support</a>
+<a href="updates.html">Updates</a>
+<a href="about.html">About methods:</a>
+</div>
+<div id="content">
+<p id="slogan">
+End-to-end recruitment management and information system
+</p>
+<div class="sect2">
+<h3 id="prs8_upgrade">Version 8 upgrade FAQ</h3>
+<div class="qlist qanda"><ol>
+<li>
+<p><em>
+Do I have to upgrade the shared database to use the PRS8 Client?
+</em></p>
+<p>
+No, the shared database upgrade from version 7.x.x to 8.0.x is
+optional, but the following features require an upgrade:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<em>Note Types</em> renaming and deletion.
+</p>
+</li>
+<li>
+<p>
+The <em>Mail Messages Tool</em> options for creating, viewing and restoring
+  mail archives.
+</p>
+</li>
+<li>
+<p>
+The <em>Notes Tool</em> options for creating, viewing and restoring mail
+  archives.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p><em>
+When should we upgrade our shared database?
+</em></p>
+<p>
+Although you don&#8217;t need to upgrade your shared PRS 7 database to
+version 8 to use the new PRS 8 client, larger databases (over 500MB)
+will benefit (in terms of scalability and performance) from being able
+to archive old mail and notes. Your shared database size is the size
+of the <code>prs2k_data.mdb</code> file in the PRS <em>Shared Data folder</em> location.
+</p>
+</li>
+<li>
+<p><em>
+Will upgrading to PRS8 improve performance?
+</em></p>
+<p>
+If you have large numbers of saved mail messages or notes and are
+finding mail or notes performance is sluggish then archiving old mail
+or notes will improve performance.
+</p>
+</li>
+<li>
+<p><em>
+How long does the upgrade take?
+</em></p>
+<p>
+This depends on the size of you database and network performance. For
+example, a 600MB database upgraded across a 10/100 Ethernet on an
+unloaded server took us around 20 minutes.
+</p>
+</li>
+</ol></div>
+</div>
+<div class="sect2">
+<h3 id="_version_7_to_version_8_database_upgrade_procedure">Version 7 to version 8 database upgrade procedure</h3>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+First check that <strong>all</strong> machines running the PRS are on version 8 of
+  the PRS Client.
+</p>
+<div class="paragraph"><p>To download and upgrade the PRS 8 Client go to the
+<a href="updates.html#X1">Installing the Latest PRS Client</a> section on our
+Updates web page and follow the instructions.</p></div>
+</li>
+<li>
+<p>
+Once all users have been upgraded to the PRS 8 Client upgrade the
+  PRS Shared Database to version 8.
+</p>
+<div class="paragraph"><p>To upgrade the PRS 8 Shared Database go to the
+<a href="shared-data-upgrade.html">Installing the Latest PRS Shared Data</a>
+section on our Updates web page and follow the instructions.</p></div>
+</li>
+</ol></div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">PRS 8 Upgrade notes</div>
+<div class="ulist"><ul>
+<li>
+<p>
+The PRS <em>PIM Export Tool Exported file format</em> defaults to
+  <em>Microsoft Outlook</em>&#8201;&#8212;&#8201;if you use the Palm PC you&#8217;ll need to reset
+  it to <em>Palm PC</em>.
+</p>
+</li>
+<li>
+<p>
+If you&#8217;re still on <em>PRS version 6</em> you&#8217;ll need to upgrade shared
+  database to version 7 before you can upgrade to version 8 --take a
+  look at our <a href="http://prshq.com/prs7-migration.html">PRS6 to
+  PRS7 Migration</a> guide before upgrading.
+</p>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div>
+<div id="footer">
+<p>
+Last updated 2017-12-06 09:38:57 NZDT <br/>
+</p>
+<p><span class="ahem">This document might look funny (or very plain) to you, since you're not using a browser which (correctly) supports CSS.</span></p>
+<div id="badges">
+<table border="0" cellpadding="0">
+<tr>
+<td><a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a></td>
+<td><a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

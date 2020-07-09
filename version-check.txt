@@ -1,0 +1,2 @@
+prs2k_client: 8.2.2
+prs2k_data: 8.0.6

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Configuration Options &gt; File Locations &gt; Document File Name Format</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="Document File Name Format">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?document_file_name_format.htm"; }
+  else { parent.quicksync('a3.8.2.7'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide &gt; <a href="configurationoptions.htm">Configuration Options</a> &gt; <a href="filelocations.htm">File Locations</a>&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">Document File Name Format</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="document_save_folder.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="filelocations.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="securityoptions.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>The <span style="font-weight: bold;">Document file name format</span> specifies the default file naming convention for newly <a href="documentlinking.htm">linked documents</a> (linked from the Personnel, Sites or Vacancies forms or from the <a href="inboxtool.htm">InBox Tool</a>). The <span style="font-weight: bold;">Document file name format</span> can contain the following placeholders which are substituted for actual values when a document is linked:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_TableHeading">Placeholder</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableHeading">Replaced by</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{name}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">The name of the Personnel, Vacancy or Site that the document is linked to: first name, last name for Personnel; Vacancy followed by vacancy ID for Vacancies; site name for Sites.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{id}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">The record ID of the Personnel, Vacancy or Site that the document is linked to.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{filename}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">The original file name of the linked file (without the file name extension).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{fileext}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">The original file's file name extension (including the leading dot character).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{yyyy}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Four digit year of today's date.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{yy}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Two digit year (1...99) of today's date.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{mmm}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Month (Jan, Feb ... Dec) of today's date.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{mm}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Two digit month (1...12) of today's date.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="227" style="width:227px;"><p><span class="f_CourierFixed">{dd}</span></p>
+</td>
+<td valign="top" width="341" style="width:341px;"><p><span class="f_TableBody">Two digit day (1...31) of today's date.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For example if the file name format is <span class="f_CourierFixed">{yyyy}-{mm}-{dd} {filename} ({name}){fileext}</span> then linking a document named <span class="f_CourierFixed">Joe's CV.doc</span> to Joe Bloggs personnel record on April 12 2013 will generate a linked file named <span class="f_CourierFixed">2013-04-12 Joe's CV (Joe, Bloggs).doc</span></p>
+<p><span class="f_CourierFixed">&nbsp;</span></p>
+<p><span style="font-weight: bold;">TIP:</span> If the name format starts with <span class="f_CourierFixed">{yyyy}-{mm}-{dd}</span> then the documents lists on the Personnel, Vacancies and Sites forms will be listed in date order.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The <span style="font-weight: bold;">Document file name format</span> is a site-wide value and is applied to all PRS users.</p>
+<p><span class="f_CourierFixed">&nbsp;</span></p>
+<p><span style="font-weight: bold;">NOTE:</span> The file name convention is only applied to linked documents that are copied to the <a href="documentsfolder.htm">Documents folder</a>, not to documents that already reside in the Documents folder.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>

@@ -1,0 +1,564 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>PRS Administration Guide &gt; Exporting PRS Data &gt; HTML and XML Templates</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+   <meta name="description" content="HTML and XML Templates">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <!-- This line forces IE8 into IE7 mode, safer until IE8 is better known -->
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+   <link type="text/css" href="default.css" rel="stylesheet">
+   <link type="text/css" href="custom.css" rel="stylesheet">
+   <script type="text/javascript" src="nsh.js"></script>
+
+<script type="text/javascript">   
+// Toggle Toggler 
+
+var toggleCount=false;
+var switchState;
+
+function toggleToggles() {
+
+    if (!toggleCount) {
+     toggleCount = true;
+     HMToggleExpandAll(true);
+     switchState = true;
+     }
+   
+     else if (switchState) {
+        HMToggleExpandAll(false);
+        switchState = false;
+        }
+        
+     else  {
+        HMToggleExpandAll(true);
+        switchState = true;
+        } 
+    }
+</script>
+   
+<!-- non-scrolling headers for CHM and browser-based help, local styles-->
+<style TYPE="text/css" media="screen"> 
+   body {    
+      margin:0; 
+      padding:0; 
+      overflow: auto; 
+      background: #FFFFFF; 
+   } 
+   #idheader { 
+      width:100%; 
+      height:auto; 
+      padding: 0; 
+      margin: 0; 
+} 
+    #idheaderbg  {
+    background: #6F6F6F; 
+}
+
+   #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+   #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+   #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+   #callout-table a {text-decoration: none; color: blue;}
+   #callout-table a:visited {text-decoration: none; color: blue;}
+   #overview-table a {text-decoration: none; color: black;}
+   #overview-table a:visited {text-decoration: none; color: black;}
+   #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}
+   </style>
+   
+<style TYPE="text/css" MEDIA="print">
+<!--
+/* Hide navigation links and add space between header
+     and text in the printed version. Not valid for eBooks. */
+#idnav { display:none;	 }
+.topichead { padding: 5px 5px 20px 5px; }
+-->
+</style>   
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?htmlandxmltemplates.htm"; }
+  else { parent.quicksync('a3.12.3'); }
+}
+//-->
+</script></head>
+<body>
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+<!--ZOOMSTOP-->
+
+<div id="idheader">
+<div id="idheaderbg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+       style="margin: 0px; background: url(header_bg.jpg);">
+
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   <p class="crumbs" id="idnav"><b>Navigation:</b>&nbsp;
+   
+   PRS Administration Guide &gt; <a href="exportingprsdata.htm">Exporting PRS Data</a>&nbsp;&gt;</p>
+   <p class="p_Heading1"><span class="f_Heading1">HTML and XML Templates</span></p>
+
+    </td>
+    <td align="right" width="120" valign="middle" class="topichead" id="idnav">
+    
+     <a href="mapfileformats.htm"
+        onmouseover="document.images.prev.src='btn_prev_h.gif'" 
+        onmouseout="document.images.prev.src='btn_prev_n.gif'"
+        ><img name=prev src="btn_prev_n.gif" border=0 alt="Previous page"
+        ></a><a href="exportingprsdata.htm"
+        onmouseover="document.images.main.src='btn_home_h.gif'" 
+        onmouseout="document.images.main.src='btn_home_n.gif'"><img name=main src="btn_home_n.gif" border=0 alt="Return to chapter overview"
+        ></a><a href="offlineaccess2.htm"
+        onmouseover="document.images.next.src='btn_next_h.gif'" 
+        onmouseout="document.images.next.src='btn_next_n.gif'"><img name=next src="btn_next_n.gif" border=0 alt="Next page"
+        ></a>
+    </td>
+  </tr>
+  <tr><td colspan="2" style="height: 3px; background: url(header_bg_shadow.gif)"></td></tr>
+</table>
+</div>
+
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+
+</div>  
+
+
+
+<div id="idcontent"><div id="innerdiv"> 
+<!--ZOOMRESTART-->
+<p>Index and vacancy HTML web pages and the XML vacancy file formats are based on user customisable templates located in the PRS <a href="shareddatafolder.htm">shared data folder</a>:</p>
+<p>&nbsp;</p>
+<p><span class="f_TableHeading">HTML Templates</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableHeading">Template Description</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_TableHeading">Default Template File</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><p><span class="f_TableHeading">Custom Index 1 Template File</span></p>
+</td>
+<td valign="top" width="122" style="width:122px;"><p><span class="f_TableHeading">Custom Index 2 Template File</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Vacancy web page template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">v_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><p><span class="f_CourierFixed">v_tpl_1.html</span></p>
+</td>
+<td valign="top" width="122" style="width:122px;"><p><span class="f_CourierFixed">v_tpl_2.html</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Vacancy index web page template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">vi_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><p><span class="f_CourierFixed">vi_tpl_1.html</span></p>
+</td>
+<td valign="top" width="122" style="width:122px;"><p><span class="f_CourierFixed">vi_tpl_2.html</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Vacancy index entry template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">vie_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><p><span class="f_CourierFixed">vie_tpl_1.html</span></p>
+</td>
+<td valign="top" width="122" style="width:122px;"><p><span class="f_CourierFixed">vie_tpl_2.html</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Occupation index template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">oi_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><br>
+</td>
+<td valign="top" width="122" style="width:122px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Occupation index entry template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">oie_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><br>
+</td>
+<td valign="top" width="122" style="width:122px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="207" style="width:207px;"><p><span class="f_TableBody">Occupation sub-index template.</span></p>
+</td>
+<td valign="top" width="128" style="width:128px;"><p><span class="f_CourierFixed">osi_tpl.html</span></p>
+</td>
+<td valign="top" width="123" style="width:123px;"><br>
+</td>
+<td valign="top" width="122" style="width:122px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The <span style="font-weight: bold;">Default Template Files</span> are used for vacancies in both the first Web index page (the <span class="f_CourierFixed">pi</span> index) and the second index page (the <span class="f_CourierFixed">ci</span> index). If you want separate customisation for each index create templates with the <span style="font-weight: bold;">Custom Index Template File</span> names shown in the above table (the PRS searches for templates with these names before falling back to the defaults).</p>
+<p>&nbsp;</p>
+<p><span class="f_TableHeading">XML Templates </span></p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="211" style="width:211px;"><p><span class="f_TableHeading">Template Description</span></p>
+</td>
+<td valign="top" width="131" style="width:131px;"><p><span class="f_TableHeading">Default Template File</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="211" style="width:211px;"><p><span class="f_CourierFixed">XML header</span></p>
+</td>
+<td valign="top" width="131" style="width:131px;"><p><span class="f_CourierFixed">v_header_tpl.xml</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="211" style="width:211px;"><p><span class="f_CourierFixed">XML vacancy</span></p>
+</td>
+<td valign="top" width="131" style="width:131px;"><p><span class="f_CourierFixed">v_tpl.xml</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="211" style="width:211px;"><p><span class="f_CourierFixed">XML footer</span></p>
+</td>
+<td valign="top" width="131" style="width:131px;"><p><span class="f_CourierFixed">v_footer_tpl.xml</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>Default template files are installed by the <a href="shareddatainstallation.htm">Shared Data installation</a>..</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>To customise the exported web pages or XML vacancy file edit the corresponding templates using your favorite HTML or text editor.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p>The PRS creates HTML web pages and XML vacancy files from the templates by substituting template placeholder names (enclosed in curly braces) for actual vacancy data. The substitution placeholder names and the substituted vacancy data are listed in the following table.</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<p><span style="font-weight: bold;">NOTE:</span> Substitution placeholder names are case sensitive:</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="1" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_TableHeading">Substitution Placeholder</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableHeading">Substituted Vacancy Data</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableHeading">Applied To</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Occupation}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Occupation</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1,6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{JobTitle}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">JobTitle</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Type}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">"Contract", "Permanent" or "Rostered"</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{VacancyId}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">VacancyId</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{VacancyReference}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Lower cased Vacancy Ref</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Client}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">ClientFirstName + " " + ClientLastName</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p>1</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{ClientSite}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Vacancy form Client Site field</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Contact}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">ContactFirstName + " " + ContactLastName</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{ContactSite}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Site Name from contact Personnel record</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{ContactPhone}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Business phone number from contact Personnel record</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Phone}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company site phone number</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Fax}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company site fax number</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span style="font-size: 10pt; font-family: 'Courier New';">{Email}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Contact's Email address</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{ShortDescription}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Short Job Description</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{LongDescription}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Long Job Description</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span style="font-size: 10pt; font-family: 'Courier New';">{Location}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Vacancy form Location field</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Salary}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Permanent vacancy </span><span class="f_TableBody" style="font-weight: bold;">Salary</span><span class="f_TableBody"> field.</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{ContractorRate}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Contract vacancy </span><span class="f_TableBody" style="font-weight: bold;">Contractor rate</span><span class="f_TableBody"> field.</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{MaxRemuneration}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Permanent vacancy salary </span><span class="f_TableBody" style="font-weight: bold;">Up to</span><span class="f_TableBody"> field or contract vacancy </span><span class="f_TableBody" style="font-weight: bold;">Max rate </span><span class="f_TableBody">field.</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{PublicationDate}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Publication date formatted like "mmmm d, yyyy"</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1,4,6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyId}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company ID</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyName}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company name</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1,2,4,6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyEmail}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company Email address</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyWebsite}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company website address</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyStreetAddress}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company street address</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{CompanyPostalAddress}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Recruitment company postal address</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{VacancyURL}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Vacancy page file name.</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">3,6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{SmallNew}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Small 'New' image</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{IndexCount}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Number of entries in index</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">4,6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{IndexTitle}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Auto-generated index title</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{IndexHeader}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Number of index entries and publication date</span> </p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{IndexBody}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p>Placeholder for index vacancy entries</p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{IndexURL}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Occupation sub-index file name</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{DateTime}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Date/time file was created in yyy-mm-dd hh:mm ISO format</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="164" style="width:164px;"><p><span class="f_CourierFixed">{Option1} ... {Option6}</span></p>
+</td>
+<td valign="top" width="271" style="width:271px;"><p><span class="f_TableBody">Vacancy publication options 1...6 (</span><span class="f_TableBody" style="font-weight: bold;">True</span><span class="f_TableBody"> or </span><span class="f_TableBody" style="font-weight: bold;">False</span><span class="f_TableBody">)</span></p>
+</td>
+<td valign="top" width="89" style="width:89px;"><p><span class="f_TableBody">7</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="font-size: 6pt;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">1.</span></td><td><span class="f_CourierFixed">v_tpl.html, v_tpl_1.html, v_tpl_2.html, vie_tpl.html, vie_tpl_1.html, vie_tpl_2.html, oie_tpl.html, v_tpl.xml, v_header_tpl.xml, v_footer_tpl.xml</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">2.</span></td><td><span class="f_CourierFixed">vi_tpl.html, vi_tpl_1.html, vi_tpl_2.html</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">3.</span></td><td><span class="f_CourierFixed">vie_tpl.html</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">4.</span></td><td><span class="f_CourierFixed">oi_tpl.html</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">5.</span></td><td><span class="f_CourierFixed">oie_tpl.html</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27"><span class="f_CourierFixed">6.</span></td><td><span class="f_CourierFixed">osi_tpl.html</span></td></tr></table></div><p style="text-indent: -27px; margin: 0px 0px 0px 27px;"><span class="f_CourierFixed">7. &nbsp;v_tpl.xml</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript"> 
+<!-- 
+var lastSlashPos = document.URL.lastIndexOf("/") >
+document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") :
+document.URL.lastIndexOf("\\");
+if( document.URL.substring( lastSlashPos + 1, lastSlashPos + 4
+).toLowerCase() != "~hh" )
+{
+    nsrInit();
+}
+--> 
+</script> 
+</body>
+</html>
