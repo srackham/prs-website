@@ -25,6 +25,9 @@ validate:
 		esac
 	done
 
+.PHONY: build
+build: build-sitemap
+
 # Upload website to Github and submit sitemap.txt to Google
 .PHONY: push
 push:
